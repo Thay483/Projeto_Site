@@ -13,9 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cursos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('curso', function (Blueprint $table) {
             $table->id();
             $table->text('desc_completa'); //descricao completa do curso
             $table->text('desc_minima'); //descricao minima do curso
@@ -26,7 +24,6 @@ return new class extends Migration
             $table->integer('id_imagem'); //puxa o id da imagem de outra tablea
             //$table->integer('id_prof') -> NULLABLE; //professor que pode ter nada
             //$table->BigInteger('professor_id')->unsigned();
-            $table->timestamps();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
