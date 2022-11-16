@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('cpf');
             $table->string('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia
-            $table->integer('num_casa'); //adiciona o numero da casa para marcar a moradia do professor
-            $table->string('rua');
+            $table->integer('endereço'); //adiciona o numero junto com a rua
             $table->string('bairro');
             $table->string('cidade');
             $table->string('estado');

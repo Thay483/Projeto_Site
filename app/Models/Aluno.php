@@ -9,21 +9,20 @@ class Aluno extends Model
 {
     use HasFactory;
 
-    protected $fillable [
+    protected $fillable = [
         'usuario',
         'nome_completo',
         'senha',
         'cpf',
         'cep',
-        'rua',
+        'endereço',
         'bairro',
         'cidade',
         'estado',
-        'num_casa',
         'endereco',
         'email',
         'filme',
-    ]
+    ];
 
     protected $hidden = [
         'password',
@@ -33,5 +32,11 @@ class Aluno extends Model
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //aqui diz que o relacionamento é de 1:1 da tabela alunos para usuários
+    //ou melhor, que cada aluno tem um usuário (o aluno é o próprio usuário)
+    public function users(){
+        return $this->hasOne('App/Models/User');
+    }
 
 }
