@@ -71,8 +71,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ])->givePermissionTo('aluno');
-<<<<<<< Updated upstream
-=======
      }
      else {
 
@@ -87,7 +85,6 @@ class RegisterController extends Controller
 
 
         
->>>>>>> Stashed changes
 
     }
 }

@@ -66,19 +66,11 @@
                           
                           </div>
                              <div class="form-group">
-<<<<<<< Updated upstream
-                                 <input class="checkbox" id="checkbox1" type='checkbox' />
+                                 <input class="checkbox" id="checkbox1" type='radio' name='permissao' value='aluno'/>
                              <label for="checkbox1">Aluno</label>
 
                              <div class="form-group">
-                                 <input class="checkbox" id="checkbox1" type='checkbox' />
-=======
-                                 <input class="checkbox" id="checkbox1" type='checkbox' name='permissao' value='aluno'/>
-                             <label for="checkbox1">Aluno</label>
-
-                             <div class="form-group">
-                                 <input class="checkbox" id="checkbox1" type='checkbox' name='permissao' value='professor'/>
->>>>>>> Stashed changes
+                                 <input class="checkbox" id="checkbox1" type='radio' name='permissao' value='professor'/>
                               <label for="checkbox1">Professor</label>
                         </div>
                         <div class="row mb-0">
