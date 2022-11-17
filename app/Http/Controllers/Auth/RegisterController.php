@@ -64,11 +64,30 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+     if ($data['permissao'] == 'aluno')
+     {
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ])->givePermissionTo('aluno');
+<<<<<<< Updated upstream
+=======
+     }
+     else {
+
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ])->givePermissionTo('professor');
+
+     }
+
+
+
+        
+>>>>>>> Stashed changes
 
     }
 }
