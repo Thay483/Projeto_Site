@@ -9,9 +9,19 @@ class Administrador extends Model
 {
     use HasFactory;
 
-    //aqui diz que o relacionamento é de 1:1 da tabela administradores para usuários
-    //ou melhor, que cada administrador tem um usuário (o administrador é o próprio usuário)
-    public function users(){
-        return $this->hasOne('App/Models/User');
-    }
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
 }

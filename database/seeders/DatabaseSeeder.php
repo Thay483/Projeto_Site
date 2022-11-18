@@ -15,22 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        
-        // $user = factory(user::class)->create([
-        //     'name' => 'Admin',
-        //     'email' => 'admin@admin.com',
-        //     'password' => 'admin',
-        // ]);
-
-
-        // $user = factory(user::class)->create([
-        //     'name' => 'Secretaria',
-        //     'email' => 'secretaria@secretaria.com',
-        //     'password' => 'secretaria',
-        // ]);
-
-            
-        // Factory(User::class, 5)-> create();
+        //estamos passando um array
+        //aqui estamos informando as novas classes Seeders criadas
+        $this->call([
+            AdministradoresSeeder::class,
+            SecretariosSeeder::class,
+        ]);
     }
      
 
