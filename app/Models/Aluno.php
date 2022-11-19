@@ -33,10 +33,10 @@ class Aluno extends Model
         'email_verified_at' => 'datetime',
     ];
 
-    //aqui diz que o relacionamento é de 1:1 da tabela alunos para usuários
-    //ou melhor, que cada aluno tem um usuário (o aluno é o próprio usuário)
+    //aqui diz que o relacionamento é de n:n da tabela alunos para usuários
+    //ou melhor, vários alunos tem vários usuários (o aluno é o próprio usuário)
     public function users(){
-        return $this->hasOne('App/Models/User');
+        return $this->belongsToMany('App/Models/User');
     }
 
 }

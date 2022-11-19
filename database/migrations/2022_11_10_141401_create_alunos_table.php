@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id('id_aluno');
+            $table->foreignId('id')->contrained('user');
             $table->string('usuario');
             $table->text('nome_completo');
             $table->string('password');
