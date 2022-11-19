@@ -21,6 +21,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//aqui conterá uma listinha com os usuários registrados pelo sistema de login
+Route::get('/listar-usuarios', [App\Http\Controllers\UserController::class, 'index']);
+
+//nessa rota de baixo a view irá exibir um usuário registrados pelo sistema de login através do seu id
+Route::get('/visualizar-usuario/{id}', [App\Http\Controllers\UserController::class, 'show']);
+
 //relacionar o usuário com o aluno
 //você precisa enviar essa informação ao banco de dados, por isso o método é post
 // Route::post('/alunos/relacionar/{id}', [AlunoController::class, 'relacionarAluno'])->middleware('auth');
