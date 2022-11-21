@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Secretario;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class SecretariosSeeder extends Seeder
@@ -15,7 +15,7 @@ class SecretariosSeeder extends Seeder
      */
     public function run()
     {
-        Secretario::create([
+        User::create([
             'name' => 'Secretaria',
             'email' => 'secretaria@secretaria.com',
             'password' => 'secretaria',
