@@ -17,7 +17,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    
+     protected $fillable = [
         'name',
         'email',
         'password',
@@ -41,4 +42,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //as funções abaixo define que a tabela user pertence ao aluno, professor, admin e secretaria
+    public function aluno(){
+        return $this->belongsToMany('App/Models/Aluno');
+    }
+
+    public function professor(){
+       return $this->belongsToMany('App/Models/Professor');
+   }
+
+
+
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Professor extends Model
+class Aluno extends Model
 {
     use HasFactory;
 
@@ -21,6 +21,7 @@ class Professor extends Model
         'estado',
         'endereco',
         'email',
+        'filme',
     ];
 
     protected $hidden = [
@@ -31,10 +32,11 @@ class Professor extends Model
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
+
+    //aqui diz que o relacionamento é de n:n da tabela alunos para usuários
+    //ou melhor, vários alunos tem vários usuários (o aluno é o próprio usuário)
     public function users(){
         return $this->belongsToMany('App/Models/User');
     }
 
 }
-

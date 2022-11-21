@@ -5,22 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Professor extends Model
+class Secretario extends Model
 {
     use HasFactory;
 
+    protected $table = 'secretarios';
+
     protected $fillable = [
-        'usuario',
-        'nome_completo',
-        'senha',
-        'cpf',
-        'cep',
-        'endereço',
-        'bairro',
-        'cidade',
-        'estado',
-        'endereco',
+        'name',
         'email',
+        'password',
     ];
 
     protected $hidden = [
@@ -31,10 +25,5 @@ class Professor extends Model
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
-    public function users(){
-        return $this->belongsToMany('App/Models/User');
-    }
 
 }
-
