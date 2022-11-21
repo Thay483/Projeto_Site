@@ -37,3 +37,4 @@ class Professor extends Model
     }
 
 }
+
