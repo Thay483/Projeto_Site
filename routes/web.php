@@ -30,3 +30,7 @@ Route::get('/visualizar-usuario/{id}', [App\Http\Controllers\UserController::cla
 //relacionar o usuário com o aluno
 //você precisa enviar essa informação ao banco de dados, por isso o método é post
 // Route::post('/alunos/relacionar/{id}', [AlunoController::class, 'relacionarAluno'])->middleware('auth');
+
+Route::get('/perfil', function () {
+    return view('perfil_aluno');
+});

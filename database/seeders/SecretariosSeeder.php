@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -18,8 +19,8 @@ class SecretariosSeeder extends Seeder
         User::create([
             'name' => 'Secretaria',
             'email' => 'secretaria@secretaria.com',
-            'password' => 'secretaria',
-        ]);
+            'password' => Hash::make('secretaria'),
+        ])->givePermissionTo('secretario');
 
     }
 }
