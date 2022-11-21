@@ -42,6 +42,19 @@ Gerar a key do projeto Laravel
 php artisan key:generate
 ```
 
+Instalando 'packer permission' via composer
+```sh
+composer require spatie/laravel-permission
+```
+
+```sh
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+```
+
+```sh
+php artisan optimize:clear
+```
+
 
 Acesse o projeto
 [http://localhost:8080](http://localhost:8080)
