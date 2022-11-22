@@ -39,4 +39,8 @@ class Aluno extends Model
         return $this->belongsToMany('App/Models/User');
     }
 
+    public function cursos(){
+        return $this->belongsToMany('App/Models/Curso');
+    }
+
 }

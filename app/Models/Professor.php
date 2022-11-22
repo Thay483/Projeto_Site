@@ -38,5 +38,9 @@ class Professor extends Model
         return $this->belongsToMany('App/Models/User');
     }
 
+    public function cursos(){
+        return $this->belongsTo('App/Models/Curso');
+    }
+
 }
 

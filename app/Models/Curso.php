@@ -13,4 +13,12 @@ class Curso extends Model
         'name',
     ];
 
+    public function aluno(){
+        return $this->belongsToMany('App/Models/Aluno');
+    }
+
+    public function professor(){
+        return $this->belongsToMany('App/Models/Professor');
+    }
+
 }
