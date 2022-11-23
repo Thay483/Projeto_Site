@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CursoController;
+use App\Http\Controllers\MateriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +14,14 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', [CursoController::class, 'index']);
-Route::resource('cursos', CursoController::class);
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', [MateriaController::class, 'index']);
+Route::resource('products', MateriaController::class);
+
+
 
 Auth::routes();
 
@@ -35,7 +37,7 @@ Route::get('/visualizar-usuario/{id}', [App\Http\Controllers\UserController::cla
 //você precisa enviar essa informação ao banco de dados, por isso o método é post
 // Route::post('/alunos/relacionar/{id}', [AlunoController::class, 'relacionarAluno'])->middleware('auth');
 
-Route::get('/cursos', [App\Http\Controllers\CursoController::class, 'index']);
+Route::get('/cursos', [App\Http\Controllers\Curso2Controller::class, 'index']);
 
 Route::get('/requisicao', function () {
     $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();
@@ -50,5 +52,3 @@ Route::get('/perfil', function () {
     return view('perfil_aluno');
 });
 
-Route::get('/', [CursoController::class, 'index']);
-Route::resource('cursos', CursoController::class);

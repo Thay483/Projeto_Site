@@ -1,20 +1,20 @@
-@extends('cursos.layout')
+@extends('products.layout')
 
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Adicionar Novo Curso</h2>
+            <h2>Add New Product</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('cursos.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
         </div>
     </div>
 </div>
 
 @if ($errors->any())
     <div class="alert alert-danger">
-        <strong>Whoops!</strong> Tiverem problemas com seus inputs.<br><br>
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -23,7 +23,7 @@
     </div>
 @endif
 
-<form action="{{ route('cursos.store') }}" method="POST">
+<form action="{{ route('products.store') }}" method="POST">
     @csrf
 
      <div class="row">

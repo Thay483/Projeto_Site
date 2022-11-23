@@ -2,29 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Curso;
-
+use App\Models\Materia;
 use Illuminate\Http\Request;
 
-class CursoController extends Controller
+class MateriaController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        //usando o controller para buscar direto no banco de dados os usuários
-        //mas não é recomendado, o certo é usar models.
-        // $users = DB::select('SELECT id, name, email, password FROM users');
-        // dd($users);
+        $materias = Materia::latest()->paginate(5);
 
-        // $cursos = Curso::all();
-        // //dd($users);
-
-        // return view ('cursos')->with('cursos', $cursos);
-        //retorna na view index localizada em users as informações no banco de dados da tabela users
-        $cursos = Curso::latest()->paginate(5);
-
-        return view('cursos.index',compact('cursos'))
-       ->with(request()->input('page'));
+        return view('products.index',compact('materias'))
+            ->with(request()->input('page'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -32,7 +27,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        return view ('cursos.create');
+        return view('products.create');
     }
 
     /**
@@ -45,7 +40,6 @@ class CursoController extends Controller
     {
         $request->validate([
             'nome' => 'required',
-            'desc_completa' => 'required',
             'desc_minima' => 'required',
             'status' => 'required',
             'lim_min' => 'required',
@@ -53,15 +47,14 @@ class CursoController extends Controller
             'id_imagem' => 'required',
             'id_professor' => 'required',
             'id_aluno' => 'required',
-                
+            'desc_completa' => 'required',
         ]);
 
-        Curso::create($request->all());
+        Materia::create($request->all());
 
-        return redirect()->route('cursos.index')
-                        ->with('success','Product created successfully.');
+        return redirect()->route('products.index')
+                        ->with('success','Curso Criado com Sucesso');
     }
-
 
     /**
      * Display the specified resource.
@@ -69,9 +62,9 @@ class CursoController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Materia $materias)
     {
-        return view('cursos.show',compact('curso'));
+        return view('products.show',compact('products'));
     }
 
     /**
@@ -80,9 +73,9 @@ class CursoController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Curso $curso)
+    public function edit(Product $product)
     {
-        return view('cursos.edit',compact('curso'));
+        return view('products.edit',compact('product'));
     }
 
     /**
@@ -92,11 +85,10 @@ class CursoController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Curso $curso)
+    public function update(Request $request, Materia $materia)
     {
         $request->validate([
             'nome' => 'required',
-            'desc_completa' => 'required',
             'desc_minima' => 'required',
             'status' => 'required',
             'lim_min' => 'required',
@@ -104,12 +96,13 @@ class CursoController extends Controller
             'id_imagem' => 'required',
             'id_professor' => 'required',
             'id_aluno' => 'required',
+            'desc_completa' => 'required',
         ]);
 
-        $curso->update($request->all());
+        $materia->update($request->all());
 
-        return redirect()->route('cursos.index')
-                        ->with('success','Product updated successfully');
+        return redirect()->route('products.index')
+                        ->with('success','Curso Deletado com Sucesso');
     }
 
     /**
@@ -118,20 +111,11 @@ class CursoController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Materia $materia)
     {
-        $product->delete();
+        $materia->delete();
 
-        return redirect()->route('cursos.index')
+        return redirect()->route('products.index')
                         ->with('success','Product deleted successfully');
     }
-
-
-
-
-
 }
-
-
-
-
