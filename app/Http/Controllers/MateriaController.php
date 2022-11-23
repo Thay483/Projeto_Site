@@ -16,7 +16,7 @@ class MateriaController extends Controller
     {
         $materias = Materia::latest()->paginate(5);
 
-        return view('products.index',compact('materias'))
+        return view('materias.index',compact('materias'))
             ->with(request()->input('page'));
     }
 
@@ -27,7 +27,7 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        return view('materias.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class MateriaController extends Controller
 
         Materia::create($request->all());
 
-        return redirect()->route('products.index')
+        return redirect()->route('materias.index')
                         ->with('success','Curso Criado com Sucesso');
     }
 
@@ -62,9 +62,9 @@ class MateriaController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Materia $materias)
+    public function show(Materia $materia)
     {
-        return view('products.show',compact('products'));
+        return view('materias.show',compact('materia'));
     }
 
     /**
@@ -73,9 +73,9 @@ class MateriaController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Materia $materia)
     {
-        return view('products.edit',compact('product'));
+        return view('materias.edit',compact('materia'));
     }
 
     /**
@@ -101,7 +101,7 @@ class MateriaController extends Controller
 
         $materia->update($request->all());
 
-        return redirect()->route('products.index')
+        return redirect()->route('materias.index')
                         ->with('success','Curso Deletado com Sucesso');
     }
 
@@ -115,7 +115,7 @@ class MateriaController extends Controller
     {
         $materia->delete();
 
-        return redirect()->route('products.index')
+        return redirect()->route('materias.index')
                         ->with('success','Product deleted successfully');
     }
 }

@@ -1,13 +1,13 @@
-@extends('products.layout')
+@extends('materias.layout')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12">
             <div class="pull-left">
-                <h2>Teste</h2>
+                <h2>Lista de Cursos</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('products.create') }}"> Criar Novo Curso</a>
+                <a class="btn btn-success" href="{{ route('materias.create') }}"> Criar Novo Curso</a>
             </div>
         </div>
     </div>
@@ -45,9 +45,9 @@
             <td>{{ $materia->id_aluno }}</td>
             <td>{{ $materia->desc_completa }}</td>
             <td>
-                <form action="{{ route('products.destroy',$materia->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('products.show',$materia->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('products.edit',$materia->id) }}">Edit</a>
+                <form action="{{ route('materias.destroy',$materia->id) }}" method="POST">
+                    <a class="btn btn-info" href="{{ route('materias.show',$materia->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('materias.edit',$materia->id) }}">Edit</a>
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>

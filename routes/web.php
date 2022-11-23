@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', [MateriaController::class, 'index']);
-Route::resource('products', MateriaController::class);
+Route::resource('materias', MateriaController::class);
 
 
 
