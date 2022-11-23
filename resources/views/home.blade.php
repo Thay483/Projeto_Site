@@ -25,6 +25,10 @@
     <h1></h1>
     <div class="col-4">
     <a class="btn btn-primary" href="/cursos_matriculados" role="button">Cursos Matriculados</a>
+    <a class="btn btn-primary" href="/cursos" role="button">Cursos</a>
+    </div>
+    <break></break>
+    <h1></h1>
     </div>
             </div>
         </div>

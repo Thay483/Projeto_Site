@@ -10,7 +10,15 @@ class Curso extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'nome',
+        'desc_completa',
+        'desc_minima',
+        'status',
+        'lim_min',
+        'lim_max',
+        'id_imagem',
+        'id_professor',
+        'id_aluno',
     ];
 
     public function aluno(){
@@ -19,6 +27,10 @@ class Curso extends Model
 
     public function professor(){
         return $this->belongsToMany('App/Models/Professor');
+    }
+
+    public function curso(){
+        return $this->belongsToMany('App/Models/Curso');
     }
 
 }

@@ -13,18 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
- Schema::create('cursos', function (Blueprint $table) {
-            // $table->id();
-            // $table->text('desc_completa'); //descricao completa do curso
-            // $table->text('desc_minima'); //descricao minima do curso
+            Schema::create('cursos', function (Blueprint $table) {
+            $table->id();
+            $table->text('desc_completa'); //descricao completa do curso
+            $table->text('desc_minima'); //descricao minima do curso
             $table->text('nome'); //nome completo do curso
-            // $table->integer('status'); //status do curso vai puxar de outra tabela 
-            // $table->integer('lim_min'); //limite minimo de pessoas no curso
-            // $table->integer('lim_max'); //limite maximo de pessoas no curso
-            // $table->integer('id_imagem'); //puxa o id da imagem de outra tablea
-            // $table->foreignId('id_professor')->contrained('professores');
-            // $table->foreignId('id_aluno')->contrained('alunos');
-            // $table->rememberToken();
+            $table->integer('status'); //status do curso vai puxar de outra tabela 
+            $table->integer('lim_min'); //limite minimo de pessoas no curso
+            $table->integer('lim_max'); //limite maximo de pessoas no curso
+            $table->integer('id_imagem'); //puxa o id da imagem de outra tablea
+            $table->foreignId('id_professor')->contrained('professores');
+            $table->foreignId('id_aluno')->contrained('alunos');
+            $table->timestamps();
 
             //$table->foregey('professor_id')->references('id')->on('professor');
         });
