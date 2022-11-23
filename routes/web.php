@@ -37,7 +37,7 @@ Route::get('/visualizar-usuario/{id}', [App\Http\Controllers\UserController::cla
 //você precisa enviar essa informação ao banco de dados, por isso o método é post
 // Route::post('/alunos/relacionar/{id}', [AlunoController::class, 'relacionarAluno'])->middleware('auth');
 
-Route::get('/cursos', [App\Http\Controllers\Curso2Controller::class, 'index']);
+Route::get('/cursos', [App\Http\Controllers\CursoController::class, 'index']);
 
 Route::get('/requisicao', function () {
     $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();

@@ -25,7 +25,8 @@
     <h1></h1>
     <div class="col-4">
     <a class="btn btn-primary" href="/cursos_matriculados" role="button">Cursos Matriculados</a>
-    <a class="btn btn-primary" href="/materias" role="button">Cursos</a>
+    <h1></h1>
+    <a class="btn btn-primary" href="/materias" role="button">Secretaria</a>
     </div>
     <break></break>
     <h1></h1>
