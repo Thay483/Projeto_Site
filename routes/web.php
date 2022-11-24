@@ -33,6 +33,11 @@ Route::get('/visualizar-usuario/{id}', [App\Http\Controllers\UserController::cla
 
 Route::get('/cursos', [App\Http\Controllers\CursoController::class, 'index']);
 
+Route::get('/lista-alunos', [App\Http\Controllers\AlunoController::class, 'index']);
+Route::get('/alunos', [App\Http\Controllers\AlunoController::class, 'create']);
+Route::post('/alunos', [App\Http\Controllers\AlunoController::class, 'store']);
+//Route::get('/alunos', [App\Http\Controllers\AlunoController::class, 'edit']);
+
 Route::get('/requisicao', function () {
     $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();
     dd($json);
