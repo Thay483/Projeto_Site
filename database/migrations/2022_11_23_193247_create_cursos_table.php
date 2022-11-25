@@ -22,6 +22,8 @@ return new class extends Migration
             // $table->integer('lim_min'); //limite minimo de pessoas no curso
             // $table->integer('lim_max'); //limite maximo de pessoas no curso
             // $table->integer('id_imagem'); //puxa o id da imagem de outra tablea
+            // //$table->integer('id_prof') -> NULLABLE; //professor que pode ter nada
+            // //$table->BigInteger('professor_id')->unsigned();
             // $table->foreignId('id_professor')->contrained('professores');
             // $table->foreignId('id_aluno')->contrained('alunos');
             // $table->rememberToken();

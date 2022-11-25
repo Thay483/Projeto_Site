@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\AlunoController;
 
 /*
@@ -17,6 +18,11 @@ use App\Http\Controllers\AlunoController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', [MateriaController::class, 'index']);
+Route::resource('materias', MateriaController::class);
+
+
 
 Auth::routes();
 
@@ -51,3 +57,4 @@ Route::get('/cursos_matriculados', function () {
 Route::get('/perfil', function () {
     return view('perfil_aluno');
 });
+
