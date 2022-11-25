@@ -10,7 +10,9 @@
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="inputName4">Nome Completo: {{ $aluno->nome_completo }}</label>
-      
+        <div class="form-group col-md-6">
+        <label for="inputFilme">Filme Favorito: {{ $aluno->filme }}</label>
+        </div>  
         </div>
         <div class="form-group col-md-2">
         <label for="inputCPF">CPF: {{ $aluno->cpf }}</label>

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('bairro');
             $table->string('cidade');
             $table->string('estado');
-            //$table->json('filme'); //recebe o valor do filme na api (ver no github do valbert)   
+            $table->string('filme'); //recebe o valor do filme na api (ver no github do valbert)   
             //$table->rememberToken();
             //$table->timestampTz('ultimo_acesso', $precision = 0); //usar isso aqui pra salvar os ultimos momentos
             $table->timestamps();

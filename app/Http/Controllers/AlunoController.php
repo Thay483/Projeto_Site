@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+// use Illuminate\Support\Facades\Http;
 use App\Models\Aluno;
 use Illuminate\Http\Request;
 
@@ -39,7 +40,7 @@ class AlunoController extends Controller
 
         Aluno::create($request->all());
 
-        return view('alunos.index')->with('success','Aluno cadastrado com sucesso!');
+        return view('alunos.create');
 
     }
 
@@ -59,14 +60,15 @@ class AlunoController extends Controller
 
         $aluno->fill($request->all())->save();
 
-        return redirect()->route('alunos.index')->with('success','Aluno editado com sucesso!');
+        return redirect()->route('alunos.index');
 
     }
 
     public function destroy(Aluno $aluno){
 
         $aluno->delete();
-        return view('alunos.index')->with('success','Aluno deletado com sucesso!');
+        
+        return redirect()->route('alunos.index');
 
     }
 }

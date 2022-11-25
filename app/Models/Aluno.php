@@ -18,7 +18,7 @@ class Aluno extends Model
         'bairro',
         'cidade',
         'estado',
-        // 'filme',
+        'filme',
     ];
 
     //aqui diz que o relacionamento é de n:n da tabela alunos para usuários

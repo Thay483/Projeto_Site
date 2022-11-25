@@ -39,10 +39,10 @@ Route::get('/cursos', [App\Http\Controllers\CursoController::class, 'index']);
 //  Route::post('/alunos', [App\Http\Controllers\AlunoController::class, 'store']);
 Route::resource('alunos', AlunoController::class);
 
-Route::get('/requisicao', function () {
-    $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();
-    dd($json);
-});
+// Route::get('/requisicao', function () {
+//     $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();
+//     dd($json);
+// });
 
 Route::get('/cursos_matriculados', function () {
     return view('cursos_matriculados');

@@ -4,14 +4,6 @@
 
     @include('components/flash-mensagem') 
 
-    <!-- <table class="table">
-    <thead>
-        <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nome</th>
-        </tr>
-    </thead>
-    <tbody> -->
     <form>
   @foreach ($alunos as $aluno)
 
@@ -26,6 +18,12 @@
         <input type="text" class="form-control" id="cpf"  placeholder="{{ $aluno->cpf }}" readonly>
       </div>
     </div>
+      <div class="form-group col-md-6">
+        <label for="inputFilme">Filme Favorito:</label>
+        <input type="text" class="form-control" name="filme" id="filme" placeholder="{{ $aluno->filme }}">
+        </div>
+  
+  <h4>Moradia:</h4>
     <div class="form-group col-md-6">
         <label for="inputAddress">Endereço:</label>
         <input type="text" class="form-control" id="endereço" placeholder="{{ $aluno->endereço }}" readonly>
