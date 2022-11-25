@@ -23,6 +23,13 @@
     </div>
     <break></break>
     <h1></h1>
+
+        <div class="col-4">
+        <a class="btn btn-primary" href="/cursos" role="button">Cadastrar Cursos</a>
+        </div>
+        <break></break>
+        <h1></h1>
+    
     <div class="col-4">
     <a class="btn btn-primary" href="/cursos_matriculados" role="button">Cursos Matriculados</a>
     <h1></h1>
