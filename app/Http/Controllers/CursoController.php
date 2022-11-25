@@ -20,10 +20,12 @@ class CursoController extends Controller
 
         return view ('cursos.index')->with('cursos', $cursos);
         //retorna na view index localizada em users as informações no banco de dados da tabela users
+    }
 
     public function create(){
 
-        return view('cursos.create');
+        return view('cursos.index');
+    }
 
 
     
