@@ -39,7 +39,34 @@ class AlunoController extends Controller
 
         Aluno::create($request->all());
 
-        return redirect('/lista-alunos')->with('sucesso','Perfil registrado com sucesso!');
+        return view('alunos.index')->with('success','Aluno cadastrado com sucesso!');
+
+    }
+
+    public function show(Aluno $aluno){
+
+        return view('alunos.show', compact('aluno'));
+
+    }
+
+    public function edit(Aluno $aluno){
+
+        return view('alunos.edit', compact('aluno'));
+
+    }
+
+    public function update(Request $request, Aluno $aluno){
+
+        $aluno->fill($request->all())->save();
+
+        return redirect()->route('alunos.index')->with('success','Aluno editado com sucesso!');
+
+    }
+
+    public function destroy(Aluno $aluno){
+
+        $aluno->delete();
+        return view('alunos.index')->with('success','Aluno deletado com sucesso!');
 
     }
 }

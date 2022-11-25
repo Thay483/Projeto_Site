@@ -1,8 +1,8 @@
-<x-layout title='Alunos'>
+<x-layout title='Lista de Alunos'>
 
-    <h2>Meu Perfil</h2>
+    <h2>Lista de Alunos Cadastrados:</h2>
 
-    @include('components/flash-mensagem')
+    @include('components/flash-mensagem') 
 
     <!-- <table class="table">
     <thead>
@@ -13,23 +13,18 @@
     </thead>
     <tbody> -->
     <form>
-    @foreach ($alunos as $aluno)
-    <h3>Meu ID:</h3>
-    <div class="form-group col-md-4">
-            <label for="inputUsuario">ID:</label>
-            <input type="text" class="form-control" id="id" placeholder="{{ $aluno->id }}" readonly>  
-    </div>
+  @foreach ($alunos as $aluno)
 
-    <h3>Meu Cadastro:</h3>    
+    <h4>Aluno: {{ $aluno->nome_completo }}</h4>
+        <div class="form-group col-md-1">
+                <label for="inputUsuario">ID:</label>
+                <input type="text" class="form-control " id="id" placeholder="{{ $aluno->id }}" readonly>  
+        </div>    
     <div class="form-row">
-        <div class="form-group col-md-6">
-        <label for="inputName4">Nome Completo:</label>
-        <input type="text" class="form-control" id="nome_completo" placeholder="{{ $aluno->nome_completo }}" readonly>
-        </div>
-        <div class="form-group col-md-2">
+      <div class="form-group col-md-2">
         <label for="inputCPF">CPF:</label>
         <input type="text" class="form-control" id="cpf"  placeholder="{{ $aluno->cpf }}" readonly>
-        </div>
+      </div>
     </div>
     <div class="form-group col-md-6">
         <label for="inputAddress">Endereço:</label>
@@ -52,33 +47,18 @@
         <label for="inputCEP">CEP</label>
         <input type="text" class="form-control" id="cep" placeholder="{{ $aluno->cep }}" readonly>
         </div><br>
-        <a class="btn btn-success" href="#" role="button">Editar</a>
+        <a class="btn btn-primary" href="{{ route('alunos.edit', $aluno->id_aluno) }}" role="button">Editar</a><br>
+        <a class="btn btn-success" href="{{ route('alunos.show', $aluno->id_aluno) }}" role="button">Visualizar Registro</a><br>
         
-    @endforeach
+        <form action="{{ route('alunos.destroy', $aluno->id_aluno) }}" method="POST">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger" type="submit">Deletar</button>
+        </form>
+
+        <br><br>
+        
+  @endforeach
     </form><br>
-    <!-- </tbody> 
-    </table> -->
-
-    <!-- Modal1 -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-
-    <!-- <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Descrição do Curso:</h5>
-      </div>
-      <div class="modal-body">
-        Aprende a cozinhar gostoso.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div> -->
 
 </x-layout>

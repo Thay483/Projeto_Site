@@ -2,7 +2,9 @@
 
     <h1>Meu perfil</h1>
 
-    <form action="/alunos" method=POST>
+    @include('components/flash-mensagem')
+
+    <form action="{{ route('alunos.store') }}" method="POST">
         @csrf
         <!-- <label>Nome Completo: </label>
         <input type="text" name="nome_completo" id="nome_completo" placeholder="Nome Completo do Aluno"><br><br>
