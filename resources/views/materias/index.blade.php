@@ -8,6 +8,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('materias.create') }}"> Criar Novo Curso</a>
+                <a class="btn btn-primary" href="/home"> Voltar</a>
             </div>
         </div>
     </div>
@@ -26,6 +27,7 @@
             <th>Lim Mínimo</th>
             <th>Lim Máximo</th>
             <th>ID Aluno</th>
+            <th>Nota do Aluno</th>
             <th>Desc Completa</th>
             <th width="280px">Action</th>
         </tr>
@@ -37,6 +39,7 @@
             <td>{{ $materia->lim_min }}</td>
             <td>{{ $materia->lim_max }}</td>
             <td>{{ $materia->alunos_id }}</td>
+            <td>{{ $materia->notas_nota }}</td>
             <td>{{ $materia->desc_completa }}</td>
             <td>
                 <form action="{{ route('materias.destroy',$materia->id) }}" method="POST">

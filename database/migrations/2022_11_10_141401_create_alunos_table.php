@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name')->unique()->constrained('users'); //nome do usuário
             $table->text('nome_completo');
             $table->string('cpf');
-            $table->string('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia
+            $table->integer('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia
             $table->text('endereço'); //adiciona o numero junto com a rua
             $table->string('bairro');
             $table->string('cidade');

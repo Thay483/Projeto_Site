@@ -16,11 +16,12 @@ class CreateMateriasTable extends Migration
         Schema::create('materias', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('alunos_id')->constrained('alunos');
+            $table->bigInteger('notas_nota')->constrained('notas');
             //$table->bigInteger('id_professor')->constrained('alunos');
-            $table->string('nome');
+            $table->string('nome')->unique();
             $table->string('desc_minima');
-            $table->string('lim_min');
-            $table->string('lim_max');
+            $table->integer('lim_min');
+            $table->integer('lim_max');
             $table->string('desc_completa');
             $table->timestamps();
         });

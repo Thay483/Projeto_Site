@@ -38,10 +38,10 @@
       <form>
       @foreach ($materias as $materia)
         <div class="form-group">
-          <label for="formGroupExampleInput2">Professor: </label>
+          <label for="formGroupExampleInput2">Professor: (Nome do Professor) </label>
         </div>
         <div class="form-group">
-          <label for="formGroupExampleInput2">Nota: </label>
+          <label for="formGroupExampleInput2">Nota: {{ $materia->notas_nota }} </label>
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput">Descrição mínima do curso: {{ $materia->desc_minima }}</label>

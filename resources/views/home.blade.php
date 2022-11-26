@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Seja bem-vindo!') }}</div>
+                <div class="card-header">{{ __('Painel de Controle') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,13 +14,17 @@
                         </div>
                     @endif
 
-                    {{ __('...') }}
+                    {{ __('Seja bem-vindo!') }}
                 </div>
-                <div class="container">
-  <div class="row justify-content-start">
-    <div class="col-4">
-    <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
-    </div>
+                
+   
+        <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
+    
+    <break></break>
+    <h1></h1>
+
+    <a class="btn btn-primary" href="/materias" role="button">Cadastro de Cursos</a>
+    
     <break></break>
     <h1></h1>
 
@@ -30,13 +34,11 @@
         <break></break>
         <h1></h1> -->
     
-    <!-- <div class="col-4">
-    <a class="btn btn-primary" href="/cursos_matriculados" role="button">Cursos Matriculados</a>
-    <h1></h1>
-    <a class="btn btn-primary" href="/materias" role="button">Secretaria</a>
-    </div>
+    
+        <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>
+    
     <break></break>
-    <h1></h1> -->
+    <h1></h1>
     </div>
             </div>
         </div>

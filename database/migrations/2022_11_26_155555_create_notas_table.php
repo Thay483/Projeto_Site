@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('notas', function (Blueprint $table) {
             $table->id();
+            $table->string('nome')->constrained('materias'); //nome do curso
+            $table->string('name')->constrained('alunos'); //nome do usuário aluno
+            $table->integer('nota'); //nota do aluno
             $table->timestamps();
         });
     }

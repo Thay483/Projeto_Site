@@ -58,6 +58,12 @@
                 <input type="text" name="alunos_id" value="{{ $materia->alunos_id }}" class="form-control" placeholder="ID do Aluno">
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Nota do Aluno:</strong>
+                <input type="text" name="notas_nota" value="{{ $materia->notas_nota }}" class="form-control" placeholder="Nota do Aluno">
+            </div>
+        </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descrição Completa:</strong>

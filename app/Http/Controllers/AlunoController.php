@@ -40,7 +40,7 @@ class AlunoController extends Controller
 
         Aluno::create($request->all());
 
-        return view('alunos.create');
+        return view('/home');
 
     }
 

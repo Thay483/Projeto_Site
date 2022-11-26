@@ -13,6 +13,7 @@ class Materia extends Model
     protected $fillable = [
         'alunos_id',
         'nome',
+        'notas_nota',
         'desc_minima',
         'lim_min',
         'lim_max',
