@@ -22,12 +22,9 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Desc Míima</th>
-            <th>Status</th>
+            <th>Desc Mínima</th>
             <th>Lim Mínimo</th>
             <th>Lim Máximo</th>
-            <th>ID Imagem</th>
-            <th>ID Prof</th>
             <th>ID Aluno</th>
             <th>Desc Completa</th>
             <th width="280px">Action</th>
@@ -37,12 +34,9 @@
             <td>{{ $materia->id }}</td>
             <td>{{ $materia->nome }}</td>
             <td>{{ $materia->desc_minima }}</td>
-            <td>{{ $materia->status }}</td>
             <td>{{ $materia->lim_min }}</td>
             <td>{{ $materia->lim_max }}</td>
-            <td>{{ $materia->id_imagem }}</td>
-            <td>{{ $materia->id_professor }}</td>
-            <td>{{ $materia->id_aluno }}</td>
+            <td>{{ $materia->alunos_id }}</td>
             <td>{{ $materia->desc_completa }}</td>
             <td>
                 <form action="{{ route('materias.destroy',$materia->id) }}" method="POST">

@@ -41,12 +41,6 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Status:</strong>
-                <input type="text" name="status" class="form-control" placeholder="Status">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Limite Mínimo de Alunos:</strong>
                 <input type="text" name="lim_min" class="form-control" placeholder="Limite Mínimo de Alunos">
             </div>
@@ -59,20 +53,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>ID da Imagem:</strong>
-                <input type="text" name="id_imagem" class="form-control" placeholder="ID da Imagem">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>ID do Professor:</strong>
-                <input type="text" name="id_professor" class="form-control" placeholder="ID do Professor">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>ID do Aluno:</strong>
-                <input type="text" name="id_aluno" class="form-control" placeholder="ID do Aluno">
+                <input type="text" name="alunos_id" class="form-control" placeholder="ID do Aluno">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

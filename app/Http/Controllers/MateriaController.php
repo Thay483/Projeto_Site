@@ -40,13 +40,10 @@ class MateriaController extends Controller
     {
         $request->validate([
             'nome' => 'required',
+            'alunos_id' => 'required',
             'desc_minima' => 'required',
-            'status' => 'required',
             'lim_min' => 'required',
             'lim_max' => 'required',
-            'id_imagem' => 'required',
-            'id_professor' => 'required',
-            'id_aluno' => 'required',
             'desc_completa' => 'required',
         ]);
 
@@ -89,13 +86,10 @@ class MateriaController extends Controller
     {
         $request->validate([
             'nome' => 'required',
+            'alunos_id',
             'desc_minima' => 'required',
-            'status' => 'required',
             'lim_min' => 'required',
             'lim_max' => 'required',
-            'id_imagem' => 'required',
-            'id_professor' => 'required',
-            'id_aluno' => 'required',
             'desc_completa' => 'required',
         ]);
 

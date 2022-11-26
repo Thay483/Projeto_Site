@@ -42,12 +42,6 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Status:</strong>
-                    <input type="text" name="status" value="{{ $materia->status }}" class="form-control" placeholder="Status">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
                     <strong>Limite Mínimo:</strong>
                     <input type="text" name="lim_min" value="{{ $materia->lim_min }}" class="form-control" placeholder="Limite Mínimo">
                 </div>
@@ -59,23 +53,11 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>ID Da Imagem:</strong>
-                    <input type="text" name="id_imagem" value="{{ $materia->id_imagem }}" class="form-control" placeholder="ID Da Imagem">
-                </div>
+            <div class="form-group">
+                <strong>ID do Aluno:</strong>
+                <input type="text" name="alunos_id" value="{{ $materia->alunos_id }}" class="form-control" placeholder="ID do Aluno">
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>ID Do Professor:</strong>
-                    <input type="text" name="id_professor" value="{{ $materia->id_professor }}" class="form-control" placeholder="ID Do Professor">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>ID Do Aluno:</strong>
-                    <input type="text" name="id_aluno" value="{{ $materia->id_aluno }}" class="form-control" placeholder="ID Do Aluno">
-                </div>
-            </div>
+        </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descrição Completa:</strong>

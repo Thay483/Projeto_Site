@@ -5,7 +5,7 @@
     <form>
     <h3>Meu Registro:</h3>
     <div class="form-group col-md-4">
-            <label for="inputUsuario">ID: {{ $aluno->id }}</label> 
+            <label for="inputUsuario">Usuário: {{ $aluno->name }}</label> 
     </div>    
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -34,7 +34,7 @@
         <div class="form-group col-md-2">
         <label for="inputCEP">CEP: {{ $aluno->cep }}</label>
         </div><br>
-        <a class="btn btn-success" href="{{ route('alunos.edit', $aluno->id_aluno) }}" role="button">Editar</a>
+        <a class="btn btn-success" href="{{ route('alunos.edit', $aluno->id) }}" role="button">Editar</a>
         <a class="btn btn-success" href="/home" role="button">Sair</a>
         
     </form><br>

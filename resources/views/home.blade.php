@@ -19,24 +19,24 @@
                 <div class="container">
   <div class="row justify-content-start">
     <div class="col-4">
-    <a class="btn btn-primary" href="/cursos" role="button">Cursos</a>
+    <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
     </div>
     <break></break>
     <h1></h1>
 
-        <div class="col-4">
+        <!-- <div class="col-4">
         <a class="btn btn-primary" href="/cursos" role="button">Cadastrar Cursos</a>
         </div>
         <break></break>
-        <h1></h1>
+        <h1></h1> -->
     
-    <div class="col-4">
+    <!-- <div class="col-4">
     <a class="btn btn-primary" href="/cursos_matriculados" role="button">Cursos Matriculados</a>
     <h1></h1>
     <a class="btn btn-primary" href="/materias" role="button">Secretaria</a>
     </div>
     <break></break>
-    <h1></h1>
+    <h1></h1> -->
     </div>
             </div>
         </div>

@@ -10,10 +10,10 @@
         </tr>
     </thead>
     <tbody>
-    @foreach ($cursos as $curso)
+    @foreach ($materias as $materia)
     <tr>
     <th>
-    <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal" >{{ $curso->nome }}</a>
+    <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal" >{{ $materia->nome }}</a>
     </th>
     <th>
     <button type="button" class="btn btn-success">Matricular-se</button>
@@ -29,13 +29,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Descrição do Curso:</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Informação do Curso:</h5>
       </div>
       <div class="modal-body">
-        Aprende a cozinhar gostoso.
+      <form>
+      @foreach ($materias as $materia)
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Professor: </label>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Nota: </label>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Descrição mínima do curso: {{ $materia->desc_minima }}</label>
+        </div>
+      @endforeach
+      <form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

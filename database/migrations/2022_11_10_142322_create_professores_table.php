@@ -14,12 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('professores', function (Blueprint $table) {
-            $table->id('id_professor');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->id();
+            $table->string('name')->unique(); //nome do usuário
+            $table->text('nome_completo');
+            $table->string('cpf');
+            $table->string('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia
+            $table->text('endereço'); //adiciona o numero junto com a rua
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->string('estado');
+            //$table->rememberToken();
+            //$table->timestampTz('ultimo_acesso', $precision = 0); //usar isso aqui pra salvar os ultimos momentos
             $table->timestamps();
         });
     }

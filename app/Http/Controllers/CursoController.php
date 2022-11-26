@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use App\Models\Curso;
+use App\Models\Materia;
 
 
 use Illuminate\Http\Request;
@@ -15,10 +17,10 @@ class CursoController extends Controller
         // $users = DB::select('SELECT id, name, email, password FROM users');
         // dd($users);
 
-        $cursos = Curso::all();
+        $materias = DB::select('SELECT nome, desc_minima FROM materias');
         //dd($users);
 
-        return view ('cursos.index')->with('cursos', $cursos);
+        return view ('cursos.index')->with('materias', $materias);
         //retorna na view index localizada em users as informações no banco de dados da tabela users
     }
 
@@ -27,6 +29,15 @@ class CursoController extends Controller
         return view('cursos.index');
     }
 
+    // public function dashboard(){
+
+    //     $alunos = DB::select('SELECT id FROM alunos');
+    //     $materias = DB::select('SELECT id FROM materias');
+
+    //     $materias = $alunos->$materias;
+
+    //     return view ('cursos.dashboard')->with('materias', $materias);
+    // }
 
     
 }

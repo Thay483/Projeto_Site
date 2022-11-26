@@ -44,13 +44,13 @@ class User extends Authenticatable
     ];
 
     //as funções abaixo define que a tabela user pertence ao aluno, professor, admin e secretaria
-    public function aluno(){
-        return $this->belongsToMany('App/Models/Aluno');
-    }
+    // public function aluno(){
+    //     return $this->belongsToMany('App/Models/Aluno');
+    // }
 
-    public function professor(){
-       return $this->belongsToMany('App/Models/Professor');
-   }
+//     public function professor(){
+//        return $this->belongsToMany('App/Models/Professor');
+//    }
 
 
 

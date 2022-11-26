@@ -9,8 +9,8 @@
 
     <h4>Aluno: {{ $aluno->nome_completo }}</h4>
         <div class="form-group col-md-1">
-                <label for="inputUsuario">ID:</label>
-                <input type="text" class="form-control " id="id" placeholder="{{ $aluno->id }}" readonly>  
+                <label for="inputUsuario">Usuário:</label>
+                <input type="text" class="form-control " id="name" placeholder="{{ $aluno->name }}" readonly>  
         </div>    
     <div class="form-row">
       <div class="form-group col-md-2">
@@ -45,10 +45,10 @@
         <label for="inputCEP">CEP</label>
         <input type="text" class="form-control" id="cep" placeholder="{{ $aluno->cep }}" readonly>
         </div><br>
-        <a class="btn btn-primary" href="{{ route('alunos.edit', $aluno->id_aluno) }}" role="button">Editar</a><br>
-        <a class="btn btn-success" href="{{ route('alunos.show', $aluno->id_aluno) }}" role="button">Visualizar Registro</a><br>
+        <a class="btn btn-primary" href="{{ route('alunos.edit', $aluno->id) }}" role="button">Editar</a><br>
+        <a class="btn btn-success" href="{{ route('alunos.show', $aluno->id) }}" role="button">Visualizar Registro</a><br>
         
-        <form action="{{ route('alunos.destroy', $aluno->id_aluno) }}" method="POST">
+        <form action="{{ route('alunos.destroy', $aluno->id) }}" method="POST">
           @csrf
           @method('DELETE')
           <button class="btn btn-danger" type="submit">Deletar</button>

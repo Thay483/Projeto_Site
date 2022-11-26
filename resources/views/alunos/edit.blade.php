@@ -4,7 +4,7 @@
 
     @include('components/flash-mensagem')
 
-    <form action="{{ route('alunos.update', $aluno->id_aluno) }}" method="POST">
+    <form action="{{ route('alunos.update', $aluno->id) }}" method="POST">
         @csrf
         @method('PUT')
         <!-- <label>Nome Completo: </label>
@@ -14,9 +14,9 @@
     
         <h4>Informações do Aluno:</h4>
     <div class="form-group col-md-4">
-            <label for="inputUsuario">Meu ID:</label>
-            <input type="text" class="form-control" name="id" id="id" placeholder="ID do usuário"
-            value="{{ $aluno->id }}">  
+            <label for="inputUsuario">Usuário:</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Usuário"
+            value="{{ $aluno->name }}">  
     </div>   
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -95,7 +95,7 @@
     <div class="form-group">
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button><br>
-    <a class="btn btn-success" href="{{ route('alunos.show', $aluno->id_aluno) }}" role="button">Visualizar Registro</a>
+    <a class="btn btn-success" href="{{ route('alunos.show', $aluno->id) }}" role="button">Visualizar Registro</a>
     </form><br>
 
 </x-layout>

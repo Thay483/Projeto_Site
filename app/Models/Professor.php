@@ -12,17 +12,14 @@ class Professor extends Model
     protected $table = 'professores';
 
     protected $fillable = [
-        'usuario',
+        'name', //nome do usuário
         'nome_completo',
-        'senha',
         'cpf',
         'cep',
         'endereço',
         'bairro',
         'cidade',
         'estado',
-        'endereco',
-        'email',
     ];
 
     protected $hidden = [
@@ -33,14 +30,10 @@ class Professor extends Model
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
-    public function users(){
-        return $this->belongsToMany('App/Models/User');
-    }
 
-    public function cursos(){
-        return $this->belongsTo('App/Models/Curso');
-    }
+    // public function materia(){
+    //     return $this->belongsTo('App/Models/Materia');
+    // }
 
 }
 

@@ -10,7 +10,8 @@ class Aluno extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
+        'name',
+        'alunos_id',
         'nome_completo',
         'cpf',
         'cep',
@@ -23,12 +24,12 @@ class Aluno extends Model
 
     //aqui diz que o relacionamento é de n:n da tabela alunos para usuários
     //ou melhor, vários alunos tem vários usuários (o aluno é o próprio usuário)
-    public function users(){
-        return $this->belongsToMany('App/Models/User');
-    }
+    // public function users(){
+    //     return $this->belongsToMany('App/Models/User');
+    // }
 
-    public function cursos(){
-        return $this->belongsToMany('App/Models/Curso');
+    public function materia(){
+        return $this->belongsToMany('App/Models/Materia');
     }
 
 }

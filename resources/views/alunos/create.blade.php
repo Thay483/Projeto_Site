@@ -13,8 +13,8 @@
     
     <h4>Informações do Aluno:</h4>
     <div class="form-group col-md-4">
-            <label for="inputUsuario">Meu ID:</label>
-            <input type="text" class="form-control" name="id" id="id" placeholder="ID do usuário">  
+            <label for="inputUsuario">Usuário:</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Usuário">  
     </div>    
     <div class="form-row">
         <div class="form-group col-md-6">

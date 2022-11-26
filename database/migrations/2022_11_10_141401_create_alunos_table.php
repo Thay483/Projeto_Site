@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('alunos', function (Blueprint $table) {
-            $table->id('id_aluno');
-            $table->foreignId('id')->contrained('user');
+            $table->id();
+            $table->string('name')->unique()->constrained('users'); //nome do usuário
             $table->text('nome_completo');
             $table->string('cpf');
             $table->string('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia
