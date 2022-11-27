@@ -1,7 +1,7 @@
 <x-layout title='Cursos'>
 
     <h2>Lista de Cursos</h2>
-
+    <a class="btn btn-primary" href="/home"> Back</a>
     <table class="table">
     <thead>
         <tr>

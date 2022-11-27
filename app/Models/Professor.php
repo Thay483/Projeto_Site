@@ -31,9 +31,9 @@ class Professor extends Model
         'email_verified_at' => 'datetime',
     ];
 
-    // public function materia(){
-    //     return $this->belongsTo('App/Models/Materia');
-    // }
+    public function materia(){
+        return $this->belongsTo('App/Models/Materia');
+    }
 
 }
 

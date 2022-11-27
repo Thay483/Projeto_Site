@@ -59,6 +59,12 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>ID do Professor:</strong>
+                <input type="text" name="professores_id" class="form-control" placeholder="ID do Professor">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Nota do Aluno:</strong>
                 <input type="text" name="notas_nota" class="form-control" placeholder="Nota do Aluno">
             </div>

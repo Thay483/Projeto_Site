@@ -17,28 +17,24 @@
                     {{ __('Seja bem-vindo!') }}
                 </div>
                 
-   
+@if ($role = 'admin' or $role = 'aluno')
         <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
     
     <break></break>
     <h1></h1>
 
-    <a class="btn btn-primary" href="/materias" role="button">Cadastro de Cursos</a>
+    <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>
     
     <break></break>
     <h1></h1>
-
-        <!-- <div class="col-4">
-        <a class="btn btn-primary" href="/cursos" role="button">Cadastrar Cursos</a>
-        </div>
-        <break></break>
-        <h1></h1> -->
+@endif
+@if ($role = 'secretario')
     
-    
-        <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>
+        <a class="btn btn-primary" href="/materias" role="button">Cadastro de Cursos</a>
     
     <break></break>
     <h1></h1>
+@endif
     </div>
             </div>
         </div>

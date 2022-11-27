@@ -20,7 +20,10 @@
         <div class="form-group col-md-6">
         <label for="inputFilme">Nota do Aluno:</label>
         <input type="integer" class="form-control" name="nota" id="nota" placeholder="00">
-        </div><br><br>
+        </div>
+        <br>
+        <a class="btn btn-primary" href="/home"> Back</a>
+        <br><br>
         
     
     <button type="submit" class="btn btn-primary">Registrar</button><br>

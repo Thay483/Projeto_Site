@@ -17,8 +17,7 @@ class Materia extends Model
         'desc_minima',
         'lim_min',
         'lim_max',
-        //'id_professor',
-        //'id_imagem',
+        'professores_id',
         'desc_completa',
     ];
 
@@ -26,8 +25,8 @@ class Materia extends Model
         return $this->belongsToMany('App/Models/Aluno');
     }
 
-    // public function professor(){
-    //     return $this->belongsToMany('App/Models/Professor');
-    // }
+    public function professor(){
+        return $this->belongsToMany('App/Models/Professor');
+    }
 
 }
