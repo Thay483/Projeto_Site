@@ -1,17 +1,34 @@
-<x-layout title='Meu Registro'>
+@extends('layouts.app')
 
-    <h1>Meu Registro</h1>
+@section('content')
 
-    @include('components/flash-mensagem')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Meu Registro') }}</div>
 
-    <form action="{{ route('alunos.store') }}" method="POST">
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('Preencha suas informações a baixo:') }}
+                </div>
+
+
+    <!-- @include('components/flash-mensagem') -->
+
+    <form class="card-body" action="{{ route('alunos.store') }}" method="POST">
         @csrf
         <!-- <label>Nome Completo: </label>
         <input type="text" name="nome_completo" id="nome_completo" placeholder="Nome Completo do Aluno"><br><br>
         
         <button type="submit">Salvar</button> -->
     
-    <h4>Informações do Aluno:</h4>
+    
     <div class="form-group col-md-4">
             <label for="inputUsuario">Usuário:</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="Usuário">  
@@ -88,4 +105,10 @@
     <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Lista</a>
     </form><br>
 
-</x-layout>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    @endsection
