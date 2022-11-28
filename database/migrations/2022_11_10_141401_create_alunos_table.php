@@ -21,7 +21,7 @@ return new class extends Migration
                 ->onUpdate('cascade');
             $table->text('nome_completo');
             $table->string('cpf');
-            $table->integer('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia
+            $table->integer('cep'); //utilizar essa informacao juntamente com a API para descobrir a moradia
             $table->text('endereço'); //adiciona o numero junto com a rua
             $table->string('bairro');
             $table->string('cidade');
