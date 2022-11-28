@@ -11,22 +11,14 @@ class Materia extends Model
 
 
     protected $fillable = [
-        'alunos_id',
         'nome',
-        'notas_nota',
+        'aluno_id',
+        'nota',
+        'professor_id',
         'desc_minima',
         'lim_min',
         'lim_max',
-        'professores_id',
         'desc_completa',
     ];
-
-    public function aluno(){
-        return $this->belongsToMany('App/Models/Aluno');
-    }
-
-    public function professor(){
-        return $this->belongsToMany('App/Models/Professor');
-    }
 
 }

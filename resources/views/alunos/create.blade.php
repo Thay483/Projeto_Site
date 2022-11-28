@@ -6,9 +6,22 @@
 
     <form class="card-body" action="{{ route('alunos.store') }}" method="POST">
     @csrf
+    
     <div class="form-group col-md-4">
-            <label for="inputUsuario">Usuário:</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Usuário">  
+            <label for="inputID">ID do Usuário do Aluno:</label>
+            <select id="user_id" name="user_id" class="form-control">
+                <option selected>Selecione...</option>
+                <option>1</option>  
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
     </div>    
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -19,7 +32,7 @@
         <label for="inputFilme">Filme Favorito:</label>
         <input type="text" class="form-control" name="filme" id="filme" placeholder=" Zack and Miri Make a Porno">
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-3">
         <label for="inputCPF">CPF:</label>
         <input type="text" class="form-control" name="cpf" id="cpf"  placeholder="___.___.___-__">
         </div><br>
@@ -81,6 +94,7 @@
     <button type="submit" class="btn btn-primary">Registrar</button><br>
     <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Lista</a>
     <a class="btn btn-primary" href="/home" role="button">Voltar</a>
+    
     </form><br>
 
 </x-layout>

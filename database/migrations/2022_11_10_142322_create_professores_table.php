@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('professores', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique(); //nome do usuário
+            $table->foreignId('user_id') //nome do usuário
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->text('nome_completo');
             $table->string('cpf');
             $table->integer('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia

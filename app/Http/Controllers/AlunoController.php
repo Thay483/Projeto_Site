@@ -22,6 +22,7 @@ class AlunoController extends Controller
         // $alunos = DB::select('SELECT id, name, email, password FROM alunos');
         // dd($users);
 
+        $aluno->user();
         $alunos = Aluno::all();
         //dd($users);
 
