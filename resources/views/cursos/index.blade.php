@@ -1,12 +1,15 @@
-<x-layout title='Cursos'>
+<x-layout title='Lista de Cursos' title2='Lista de Cursos' title3='Abaixo estão listados os cursos:'>
 
-    <h2>Lista de Cursos</h2>
-    <a class="btn btn-primary" href="/home"> Back</a>
-    <table class="table">
+@extends('layouts.app')
+
+@section('content')
+
+    <!-- <h2>Lista de Cursos</h2> -->
+    <table class="table card-body">
     <thead>
         <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Matrícula</th>
+        <th scope="col">Curso</th>
+        <th scope="col">Ação</th>
         </tr>
     </thead>
     <tbody>
@@ -20,8 +23,13 @@
     </th>
     </tr>
     @endforeach
-    </tbody> 
+    </tbody>
     </table>
+    <div class="form-group pull-right card-body">
+      <a class="btn btn-primary" href="/home"> Back</a>
+    </div>
+    
+    
 
     <!-- Modal1 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -58,3 +66,4 @@
 </div>
 
 </x-layout>
+@endsection

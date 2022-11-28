@@ -17,7 +17,7 @@ class CreateMateriasTable extends Migration
             $table->id();
             $table->bigInteger('alunos_id')->constrained('alunos');
             $table->bigInteger('notas_nota')->constrained('notas');
-            //$table->bigInteger('id_professor')->constrained('alunos');
+            $table->bigInteger('professores_id')->constrained('alunos');
             $table->string('nome')->unique();
             $table->string('desc_minima');
             $table->integer('lim_min');

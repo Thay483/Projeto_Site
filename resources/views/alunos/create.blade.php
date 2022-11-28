@@ -1,34 +1,11 @@
+<x-layout title='Registro do Aluno' title2='Meu Registro' title3='Preencha suas informações a baixo:'>
+
 @extends('layouts.app')
 
 @section('content')
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Meu Registro') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('Preencha suas informações a baixo:') }}
-                </div>
-
-
-    <!-- @include('components/flash-mensagem') -->
-
     <form class="card-body" action="{{ route('alunos.store') }}" method="POST">
-        @csrf
-        <!-- <label>Nome Completo: </label>
-        <input type="text" name="nome_completo" id="nome_completo" placeholder="Nome Completo do Aluno"><br><br>
-        
-        <button type="submit">Salvar</button> -->
-    
-    
+    @csrf
     <div class="form-group col-md-4">
             <label for="inputUsuario">Usuário:</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="Usuário">  
@@ -47,7 +24,7 @@
         <input type="text" class="form-control" name="cpf" id="cpf"  placeholder="___.___.___-__">
         </div><br>
     
-    <h4>Moradia:</h4>
+    <text>Moradia:</text>
     <div class="form-group col-md-6">
         <label for="inputAddress">Endereço:</label>
         <input type="text" class="form-control" name="endereço" id="endereço" placeholder="Rua dos Bobos, nº 0">
@@ -103,12 +80,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Registrar</button><br>
     <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Lista</a>
+    <a class="btn btn-primary" href="/home" role="button">Voltar</a>
     </form><br>
 
-    </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    @endsection
+</x-layout>
+@endsection
