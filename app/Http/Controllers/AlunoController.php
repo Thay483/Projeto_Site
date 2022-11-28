@@ -21,8 +21,6 @@ class AlunoController extends Controller
         //mas não é recomendado, o certo é usar models.
         // $alunos = DB::select('SELECT id, name, email, password FROM alunos');
         // dd($users);
-
-        $aluno->user();
         $alunos = Aluno::all();
         //dd($users);
 

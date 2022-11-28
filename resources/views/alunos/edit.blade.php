@@ -9,11 +9,6 @@
         @csrf
         @method('PUT')
         <h6>Aluno: {{ $aluno->nome_completo }}</h6>
-        <div class="form-group col-md-4">
-                <label for="inputUsuario">Usuário:</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Usuário"
-                value="{{ $aluno->name }}">  
-        </div>   
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="inputName4">Nome Completo:</label>

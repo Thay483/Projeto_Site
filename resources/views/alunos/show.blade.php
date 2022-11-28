@@ -4,10 +4,7 @@
 
 @section('content')
 
-<form class="card-body">
-    <div class="form-group col-md-4">
-            <label for="inputUsuario">Usuário: {{ $aluno->name }}</label> 
-    </div>    
+<form class="card-body">   
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="inputName4">Nome Completo: {{ $aluno->nome_completo }}</label>

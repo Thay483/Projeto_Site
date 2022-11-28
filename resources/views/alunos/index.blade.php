@@ -1,4 +1,4 @@
-<x-layout title='Lista de Alunos' title2='Lista dos Alunos' title3='Abaixo estão registrados os alunos do colégio:'>
+<x-layout title='Lista de Alunos' title2='Lista dos Alunos' title3='Abaixo estão os registros dos alunos:'>
 
 @extends('layouts.app')
 
@@ -8,10 +8,7 @@
         @foreach ($alunos as $aluno)
 
           <h6>Aluno: {{ $aluno->nome_completo }}</h6>
-              <div class="form-group col-md-2">
-                      <label for="inputUsuario">Usuário:</label>
-                      <input type="text" class="form-control " id="name" placeholder="{{ $aluno->name }}" readonly>  
-              </div>    
+                 
           <div class="form-row">
             <div class="form-group col-md-3">
               <label for="inputCPF">CPF:</label>
