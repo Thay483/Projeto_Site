@@ -1,6 +1,7 @@
-@extends('materias.layout')
+@extends('layouts.app')
 
 @section('content')
+<div class="container">
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
@@ -51,10 +52,10 @@
                 <input type="text" name="lim_max" class="form-control" placeholder="Limite Máximo de Alunos">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
+        <!-- <div class="col-xs-12 col-sm-12 col-md-12"> -->
+            <!-- <div class="form-group">
                 <strong>ID do Aluno:</strong>
-                <input type="text" name="alunos_id" class="form-control" placeholder="ID do Aluno">
+                <input type="text" name="id_aluno" class="form-control" placeholder="ID do Aluno">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -68,7 +69,7 @@
                 <strong>Nota do Aluno:</strong>
                 <input type="text" name="notas_nota" class="form-control" placeholder="Nota do Aluno">
             </div>
-        </div>
+        </div> -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Descrição Completa:</strong>
@@ -79,6 +80,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
+    </div>  
 
 </form>
 @endsection

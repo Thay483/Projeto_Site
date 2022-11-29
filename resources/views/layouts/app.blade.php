@@ -21,7 +21,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <img src="etavaldeitado.png" alt="logo2" widht=50 height=50>
+                <img src="/etavaldeitado.png" alt="logo2" widht=50 height=50>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -74,6 +74,11 @@
                 </div>
             </div>
         </nav>
+            @if (session('error'))
+            <div class="alert alert-danger">
+                <p>{{ session('error') }}</p>
+            </div>
+            @endif
 
         <main class="py-4">
             @yield('content')
