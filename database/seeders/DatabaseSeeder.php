@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             SecretariosSeeder::class,
             AlunosSeeder::class,
             ProfessoresSeeder::class,
-            NotasSeeder::class,
+            // NotasSeeder::class,
         ]);
     }
      
