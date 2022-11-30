@@ -17,37 +17,16 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-<<<<<<< Updated upstream
-    {
-        //estamos passando um array
-        //aqui estamos informando as novas classes Seeders criadas
-        $this->call([
-            AdministradoresSeeder::class,
-            SecretariosSeeder::class,
-            AlunosSeeder::class,
-            ProfessoresSeeder::class,
-            // NotasSeeder::class,
-        ]);
-    }
-     
-
-}
-=======
        {
                 //estamos passando um array
                 //aqui estamos informando as novas classes Seeders criadas
                 $this->call([
-        //              Updted upstream
-        //             AdministradoresSeeder::class,
-        //             SecretariosSeeder::class,
                 MateriasSeeder::class,
                 AlunosSeeder::class,
                 AdministradoresSeeder::class,
                 SecretariosSeeder::class,       
                 //ProfessoresSeeder::class,
                 // NotasSeeder::class,
-        //           Stashed changes
                 ]);
         }
 }
->>>>>>> Stashed changes

@@ -3,15 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-<<<<<<< Updated upstream
-use Illuminate\Database\Seeder;
-=======
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\str;
 use Illuminate\Support\Facades\DB;
->>>>>>> Stashed changes
 
 class AlunosSeeder extends Seeder
 {
@@ -20,13 +16,7 @@ class AlunosSeeder extends Seeder
      *
      * @return void
      */
-<<<<<<< Updated upstream
-    public function run()
-    {
-        //
-    }
-}
-=======
+
     public function run(){
         for ($i=0; $i <= 9; $i++){
             DB::table('users')->insert([
@@ -39,8 +29,7 @@ class AlunosSeeder extends Seeder
         
         for ($i=0; $i <= 9; $i++){
             DB::table('alunos')->insert([
-                
-                        'name' => "aluno$i",
+                        // 'user_id'=> "$i",
                         'nome_completo' => "aluno$i",
                         'cpf'=>"$i$i$i$i$i$i$i$i$i$i",
                         'cep'=>"$i$i$i$i$i$i$i$i",
@@ -54,4 +43,3 @@ class AlunosSeeder extends Seeder
     }
     
 }
->>>>>>> Stashed changes
