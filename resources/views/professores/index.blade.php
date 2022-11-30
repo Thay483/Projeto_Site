@@ -19,14 +19,14 @@
     <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal" >{{ $materia->nome }}</a>
     </th>
     <th>
-    <button type="button" class="btn btn-success">Matricular-se</button>
+    <button type="button" class="btn btn-success">Visualizar</button>
     </th>
     </tr>
     @endforeach
     </tbody>
     </table>
     <div class="form-group pull-right card-body">
-      <a class="btn btn-primary" href="/home"> Back</a>
+      <a class="btn btn-primary" href="/home"> Volta</a>
     </div>
     
     
@@ -40,25 +40,20 @@
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Informação do Curso:</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Alunos do Curso:</h5>
       </div>
       <div class="modal-body">
       <form>
       @foreach ($materias as $materia)
         <div class="form-group">
-          <label for="formGroupExampleInput2">Professor: (Nome do Professor) </label>
+          <label for="formGroupExampleInput2">Alunos: (Nome do Aluno) </label> //o id do aluno
         </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Nota: (Nota do Aluno) </label>
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput">Descrição mínima do curso: {{ $materia->desc_minima }}</label>
-        </div>
+        
       @endforeach
       <form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>

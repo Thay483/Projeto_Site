@@ -28,7 +28,7 @@
     <break></break>
     <h1></h1>
 
-    <a class="btn btn-primary" href="#" role="button">Cursos do Professor</a>
+    <a class="btn btn-primary" href="{{route('professores.index')}}" role="button">Cursos do Professor</a>
     
     <break></break>
     <h1></h1>
