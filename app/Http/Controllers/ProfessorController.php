@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Professor;
 use App\Models\Aluno;
+use App\Models\Nota;
 use App\Models\Materia;
 
 class ProfessorController extends Controller
@@ -17,15 +18,21 @@ class ProfessorController extends Controller
         // $users = DB::select('SELECT id, name, email, password FROM users');
         // dd($users);
 
-        $materias = DB::select('SELECT nome FROM materias'); //depois colocar o id do aluno
+        $materias = DB::select('SELECT id, nome FROM materias'); //depois colocar o id do aluno
         //dd($users);
 
         return view ('professores.index')->with('materias',$materias);
         //retorna na view index localizada em users as informações no banco de dados da tabela users
     }
+    
+    
+    
+    public function show(Materia $materia){
 
-    public function create(){
 
-        return view('professores.index');
+        return view('professores.show', compact('materia'));
+
     }
+
+    
 }

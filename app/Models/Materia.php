@@ -25,4 +25,8 @@ class Materia extends Model
         'desc_completa',
     ];
 
+    public function alunos(){
+        return $this->belongsToMany(Aluno::class);
+    }
+
 }

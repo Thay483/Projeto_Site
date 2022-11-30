@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\NotaController;
 
 /*
@@ -47,9 +48,9 @@ Route::resource('cursos', CursoController::class);
 //  Route::post('/alunos', [App\Http\Controllers\AlunoController::class, 'store']);
 Route::resource('alunos', AlunoController::class);
 
-Route::resource('professores', ProfessorController::class);
-
 Route::resource('notas', NotaController::class);
+
+Route::resource('professores', ProfessorController::class);
 
 // Route::get('/requisicao', function () {
 //     $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();

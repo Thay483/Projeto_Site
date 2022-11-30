@@ -24,7 +24,8 @@ class AlunosSeeder extends Seeder
                     'name' => "aluno$i",
                     'email' => "aluno$i@gmail.com",
                     'password'=>Hash::make('aluno'),
-            ])->givePermissionTo('aluno');
+            ]);
+            // ->givePermissionTo('aluno')
         }
         
         for ($i=0; $i <= 9; $i++){
