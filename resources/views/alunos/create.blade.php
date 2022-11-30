@@ -1,20 +1,27 @@
-<x-layout title='Meu Registro'>
+<x-layout title='Registro do Aluno' title2='Meu Registro' title3='Preencha suas informações a baixo:'>
 
-    <h1>Meu Registro</h1>
+@extends('layouts.app')
 
-    @include('components/flash-mensagem')
+@section('content')
 
-    <form action="{{ route('alunos.store') }}" method="POST">
-        @csrf
-        <!-- <label>Nome Completo: </label>
-        <input type="text" name="nome_completo" id="nome_completo" placeholder="Nome Completo do Aluno"><br><br>
-        
-        <button type="submit">Salvar</button> -->
+    <form class="card-body" action="{{ route('alunos.store') }}" method="POST">
+    @csrf
     
-    <h4>Informações do Aluno:</h4>
     <div class="form-group col-md-4">
-            <label for="inputUsuario">Usuário:</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Usuário">  
+            <label for="inputID">ID do Usuário do Aluno:</label>
+            <select id="user_id" name="user_id" class="form-control">
+                <option selected>Selecione...</option>
+                <option>1</option>  
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
     </div>    
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -25,12 +32,12 @@
         <label for="inputFilme">Filme Favorito:</label>
         <input type="text" class="form-control" name="filme" id="filme" placeholder=" Zack and Miri Make a Porno">
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-3">
         <label for="inputCPF">CPF:</label>
         <input type="text" class="form-control" name="cpf" id="cpf"  placeholder="___.___.___-__">
         </div><br>
     
-    <h4>Moradia:</h4>
+    <text>Moradia:</text>
     <div class="form-group col-md-6">
         <label for="inputAddress">Endereço:</label>
         <input type="text" class="form-control" name="endereço" id="endereço" placeholder="Rua dos Bobos, nº 0">
@@ -86,6 +93,9 @@
     </div>
     <button type="submit" class="btn btn-primary">Registrar</button><br>
     <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Lista</a>
+    <a class="btn btn-primary" href="/home" role="button">Voltar</a>
+    
     </form><br>
 
 </x-layout>
+@endsection

@@ -10,7 +10,10 @@ class Materia extends Model
     use HasFactory;
 
 
+    protected $table = 'materias';
+
     protected $fillable = [
+
         // 'id_aluno',
         'nome',
         // 'notas_nota',
@@ -18,15 +21,8 @@ class Materia extends Model
         'lim_min',
         'lim_max',
         'id_professor',
+
         'desc_completa',
     ];
-
-    public function aluno(){
-        return $this->belongsToMany('App/Models/Aluno');
-    }
-
-    public function professor(){
-        return $this->belongsToMany('App/Models/Professor');
-    }
 
 }

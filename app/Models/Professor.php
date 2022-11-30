@@ -12,7 +12,7 @@ class Professor extends Model
     protected $table = 'professores';
 
     protected $fillable = [
-        'name', //nome do usuário
+        'user_id', //nome do usuário
         'nome_completo',
         'cpf',
         'cep',
@@ -31,8 +31,8 @@ class Professor extends Model
         'email_verified_at' => 'datetime',
     ];
 
-    public function materia(){
-        return $this->belongsTo('App/Models/Materia');
+    public function materias(){
+        return $this->hasMany(Materia::class);
     }
 
 }

@@ -1,7 +1,9 @@
-@extends('materias.layout')
+<x-layout title='Lista de Cursos' title2='Lista de Cursos' title3='Tabelas das informações dos curso cadastrados:'>
+
+@extends('layouts.app')
 
 @section('content')
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-12">
             <div class="pull-left">
                 <h2>Lista de Cursos</h2>
@@ -11,7 +13,7 @@
                 <a class="btn btn-primary" href="/home"> Voltar</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -56,7 +58,14 @@
         @endforeach
 
     </table>
+    <div class="row card-body">
+        <div class="col-lg-12">
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('materias.create') }}"> Criar Novo Curso</a>
+                <a class="btn btn-primary" href="/home"> Voltar</a>
+            </div>
+        </div>
+    </div>
     {{ $materias->links() }}
-
-
+</x-layout>
 @endsection

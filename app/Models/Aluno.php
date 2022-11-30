@@ -11,7 +11,7 @@ class Aluno extends Model
 
     protected $fillable = [
         'name',
-        'alunos_id',
+        'user_id',
         'nome_completo',
         'cpf',
         'cep',
@@ -28,8 +28,8 @@ class Aluno extends Model
     //     return $this->belongsToMany('App/Models/User');
     // }
 
-    public function materia(){
-        return $this->belongsToMany('App/Models/Materia');
+    public function materias(){
+        return $this->hasMany(Materia::class);
     }
 
 }
