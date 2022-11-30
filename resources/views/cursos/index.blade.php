@@ -49,7 +49,7 @@
           <label for="formGroupExampleInput2">Professor: (Nome do Professor) </label>
         </div>
         <div class="form-group">
-          <label for="formGroupExampleInput2">Nota: {{ $materia->notas_nota }} </label>
+          <label for="formGroupExampleInput2">Nota: (Nota do Aluno) </label>
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput">Descrição mínima do curso: {{ $materia->desc_minima }}</label>
