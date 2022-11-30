@@ -13,13 +13,15 @@ class Materia extends Model
     protected $table = 'materias';
 
     protected $fillable = [
+
+        // 'id_aluno',
         'nome',
-        'aluno_id',
-        'nota',
-        'professor_id',
+        // 'notas_nota',
         'desc_minima',
         'lim_min',
         'lim_max',
+        'id_professor',
+
         'desc_completa',
     ];
 
