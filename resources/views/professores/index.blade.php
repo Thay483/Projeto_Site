@@ -1,4 +1,4 @@
-<x-layout title='Lista de Cursos' title2='Lista de Cursos' title3='Abaixo estão listados os cursos:'>
+<x-layout title='Lista de Cursos Professor' title2='Lista de Cursos do Prefessor' title3='A baixo estão a lista de cursos ministrados:'>
 
 @extends('layouts.app')
 
