@@ -20,16 +20,17 @@ class AlunosSeeder extends Seeder
     public function run(){
         for ($i=0; $i <= 9; $i++){
             DB::table('users')->insert([
-                    'id' => "$i"
+                    // 'id' => "$i",
                     'name' => "aluno$i",
                     'email' => "aluno$i@gmail.com",
                     'password'=>Hash::make('aluno'),
-            ])->givePermissionTo('aluno');
+            ]);
+            // ->givePermissionTo('aluno')
         }
         
         for ($i=0; $i <= 9; $i++){
             DB::table('alunos')->insert([
-                'user_id'=> "$i",
+                // 'user_id'=> "$i",
                 'nome_completo' => "aluno$i",
                 'cpf'=>"$i$i$i$i$i$i$i$i$i$i",
                 'cep'=>"$i$i$i$i$i$i$i$i",

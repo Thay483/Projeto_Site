@@ -16,7 +16,6 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        public function run(){
             // for ($i=0; $i <= 9; $i++){
             //     DB::table('users')->insert([
             //             'id' => "$i"
@@ -33,7 +32,5 @@ class UsersSeeder extends Seeder
             //             'email' => "professor$i@gmail.com",
             //             'password'=>Hash::make('professor'),
             //     ])->givePermissionTo('professor');
-            // }
-        }
     }
 }
