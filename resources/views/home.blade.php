@@ -17,7 +17,7 @@
                     {{ __('Seja bem-vindo!') }}
                 </div>
                 
-@if ($role = 'admin' or $role = 'aluno')
+@role('aluno', 'admin')
         <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
     
     <break></break>
@@ -27,14 +27,12 @@
     
     <break></break>
     <h1></h1>
-@endif
-@if ($role = 'secretario')
-    
+@else
         <a class="btn btn-primary" href="/materias" role="button">Cadastro de Cursos</a>
     
     <break></break>
     <h1></h1>
-@endif
+@endrole
     </div>
             </div>
         </div>

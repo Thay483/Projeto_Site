@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         //estamos passando um array
         //aqui estamos informando as novas classes Seeders criadas
         $this->call([
+            PermissionsSeeder::class,
             AdministradoresSeeder::class,
             SecretariosSeeder::class,
             AlunosSeeder::class,
