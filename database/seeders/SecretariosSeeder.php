@@ -16,11 +16,11 @@ class SecretariosSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+        return User::create([
             'name' => 'Secretaria',
             'email' => 'secretaria@secretaria.com',
             'password' => Hash::make('secretaria'),
-        ])->givePermissionTo('secretario');
+        ]);//->givePermissionTo('secretaria');
 
     }
 }

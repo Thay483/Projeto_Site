@@ -26,7 +26,7 @@ class AdministradoresSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin'),
-        ])->givePermissionTo('admin');
+        ]);//->givePermissionTo('admin');
 
     }
 }
