@@ -3,7 +3,15 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+<<<<<<< Updated upstream
 use Illuminate\Database\Seeder;
+=======
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\str;
+use Illuminate\Support\Facades\DB;
+>>>>>>> Stashed changes
 
 class AlunosSeeder extends Seeder
 {
@@ -12,8 +20,38 @@ class AlunosSeeder extends Seeder
      *
      * @return void
      */
+<<<<<<< Updated upstream
     public function run()
     {
         //
     }
 }
+=======
+    public function run(){
+        for ($i=0; $i <= 9; $i++){
+            DB::table('users')->insert([
+                
+                    'name' => "aluno$i",
+                    'email' => "aluno$i@gmail.com",
+                    'password'=>Hash::make('aluno'),
+            ]);
+            }
+        
+        for ($i=0; $i <= 9; $i++){
+            DB::table('alunos')->insert([
+                
+                        'name' => "aluno$i",
+                        'nome_completo' => "aluno$i",
+                        'cpf'=>"$i$i$i$i$i$i$i$i$i$i",
+                        'cep'=>"$i$i$i$i$i$i$i$i",
+                        'endereço'=>"casa do aluno$i",
+                        'bairro'=>"bairro do aluno$i",
+                        'cidade'=>"cidade do aluno$i",
+                        'estado'=>"estado do aluno$i",
+                        'filme'=>"Shrek",
+                    ]);
+            };        
+    }
+    
+}
+>>>>>>> Stashed changes
