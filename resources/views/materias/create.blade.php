@@ -1,9 +1,10 @@
-<x-layout title='Cadastro dos Cursos' title2='Cadastro dos Cursos' title3='Cadastro das informações do novo curso:'>
 
 @extends('layouts.app')
 
 @section('content')
-<!-- <div class="card-body row">
+<div class="container">
+<div class="row">
+
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h6>Adicionar Novo Curso</h6>
@@ -50,10 +51,10 @@
                 <input type="text" name="lim_max" class="form-control" placeholder="Limite Máximo de Alunos">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
+        <!-- <div class="col-xs-12 col-sm-12 col-md-12"> -->
+            <!-- <div class="form-group">
                 <strong>ID do Aluno:</strong>
-                <input type="text" name="alunos_id" class="form-control" placeholder="ID do Aluno">
+                <input type="text" name="id_aluno" class="form-control" placeholder="ID do Aluno">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -67,7 +68,7 @@
                 <strong>Nota do Aluno:</strong>
                 <input type="text" name="notas_nota" class="form-control" placeholder="Nota do Aluno">
             </div>
-        </div>
+        </div> -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Descrição Completa:</strong>
@@ -78,9 +79,9 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
-    <div class="pull-right">
-        <a class="btn btn-primary" href="{{ route('materias.index') }}"> Back</a>
-    </div>
+
+    </div>  
+
 
 </form>
 </x-layout>
