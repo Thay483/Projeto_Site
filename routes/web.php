@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\AlunoController;
-use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\NotaController;
 
 /*
@@ -43,12 +42,12 @@ Route::get('/visualizar-usuario/{id}', [App\Http\Controllers\UserController::cla
 
 Route::resource('cursos', CursoController::class);
 
-Route::resource('professores', ProfessorController::class);
-
 //  Route::get('/lista-alunos', [App\Http\Controllers\AlunoController::class, 'index']);
 //  Route::get('/alunos', [App\Http\Controllers\AlunoController::class, 'create']);
 //  Route::post('/alunos', [App\Http\Controllers\AlunoController::class, 'store']);
 Route::resource('alunos', AlunoController::class);
+
+Route::resource('professores', ProfessorController::class);
 
 Route::resource('notas', NotaController::class);
 
