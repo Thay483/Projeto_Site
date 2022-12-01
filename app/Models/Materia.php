@@ -21,9 +21,10 @@ class Materia extends Model
         'desc_completa',
     ];
 
-    public function aluno(){
-        return $this->belongsToMany('App/Models/Aluno');
+    public function users(){
+        return $this->belongsToMany('App/Models/User');
     }
+
 
     public function professor(){
         return $this->belongsToMany('App/Models/Professor');

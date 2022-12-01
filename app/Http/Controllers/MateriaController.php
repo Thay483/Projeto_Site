@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materia;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class MateriaController extends Controller
@@ -92,10 +93,16 @@ class MateriaController extends Controller
      */
     public function update(Request $request, Materia $materia)
     {
+        if($request->lim_min > $request->lim_max || is_numeric($request->lim_min)!=1 || is_numeric($request->lim_max)!=1 || $request->lim_max == 0 ){
+            return back()
+                        ->with('error','Houve algum erro nos inputs.');
+
+        }
+        
         $request->validate([
             'nome' => 'required',
             // 'alunos_id'=> 'required',
-            // 'professores_id' => 'required',
+            'professores_id',
             // 'notas_nota'=> 'required',
             'desc_minima' => 'required',
             'lim_min' => 'required',
@@ -121,5 +128,16 @@ class MateriaController extends Controller
 
         return redirect()->route('materias.index')
                         ->with('success','Product deleted successfully');
+    }
+    public function inscricao($id_materia,$id_aluno){
+        //if (status == 1){}
+        //if (status == 2){back}
+
+        $curso = Materia::findOrFail($id_materia);
+        $aluno = User::findOrFail($id_aluno);
+
+        $aluno->materias()->attach($id_materia);
+        redirect->back();
+        
     }
 }
