@@ -47,9 +47,11 @@ class MateriaController extends Controller
 
         $request->validate([
             'nome' => 'required',
+
             // 'notas_nota' => 'required',
             // 'alunos_id' => 'required',
             'professores_id',
+
             'desc_minima' => 'required',
             'lim_min' => 'required',
             'lim_max' => 'required',
@@ -101,9 +103,11 @@ class MateriaController extends Controller
         
         $request->validate([
             'nome' => 'required',
+
             // 'alunos_id'=> 'required',
             'professores_id',
             // 'notas_nota'=> 'required',
+
             'desc_minima' => 'required',
             'lim_min' => 'required',
             'lim_max' => 'required',

@@ -48,9 +48,9 @@ class User extends Authenticatable
          return $this->belongsToMany('App/Models/Materia');
     }
 
-//     public function professor(){
-//        return $this->belongsToMany('App/Models/Professor');
-//    }
+    public function professores(){
+        return $this->hasOne(Professor::class);
+    }
 
 
 

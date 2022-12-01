@@ -10,7 +10,10 @@ class Materia extends Model
     use HasFactory;
 
 
+    protected $table = 'materias';
+
     protected $fillable = [
+
         // 'id_aluno',
         'nome',
         // 'notas_nota',
@@ -18,6 +21,7 @@ class Materia extends Model
         'lim_min',
         'lim_max',
         'id_professor',
+
         'desc_completa',
     ];
 
