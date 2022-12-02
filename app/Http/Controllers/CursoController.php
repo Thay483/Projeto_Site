@@ -17,7 +17,7 @@ class CursoController extends Controller
         // $users = DB::select('SELECT id, name, email, password FROM users');
         // dd($users);
 
-        $materias = DB::select('SELECT nome, desc_minima, notas_nota FROM materias');
+        $materias = DB::select('SELECT nome, desc_minima FROM materias'); //depois adiciona nota
         //dd($users);
 
         return view ('cursos.index')->with('materias', $materias);
