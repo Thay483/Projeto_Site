@@ -16,21 +16,24 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-            // for ($i=0; $i <= 9; $i++){
-            //     DB::table('users')->insert([
-            //             'id' => "$i"
-            //             'name' => "aluno$i",
-            //             'email' => "aluno$i@gmail.com",
-            //             'password'=>Hash::make('aluno'),
-            //     ])->givePermissionTo('aluno');
-            // }
+
+        // public function run(){
+        //     // for ($i=0; $i <= 9; $i++){
+        //     //     DB::table('users')->insert([
+        //     //             'id' => "$i",
+        //     //             'name' => "aluno$i",
+        //     //             'email' => "aluno$i@gmail.com",
+        //     //             'password'=>Hash::make('aluno'),
+        //     //     ])->givePermissionTo('aluno');
+        //     // }
             
-            // for ($i=0; $i <= 9; $i++){
-            //     DB::table('users')->insert([
-            //             'id' => "$i"
-            //             'name' => "professor$i",
-            //             'email' => "professor$i@gmail.com",
-            //             'password'=>Hash::make('professor'),
-            //     ])->givePermissionTo('professor');
+        //     // for ($i=0; $i <= 9; $i++){
+        //     //     DB::table('users')->insert([
+        //     //             'id' => "$i",
+        //     //             'name' => "professor$i",
+        //     //             'email' => "professor$i@gmail.com",
+        //     //             'password'=>Hash::make('professor'),
+        //     //     ])->givePermissionTo('professor');
+        //     // }
+        // }
     }
-}

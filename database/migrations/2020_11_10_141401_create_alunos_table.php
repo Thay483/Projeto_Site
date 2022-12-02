@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable() //nome do usuário
+            $table->foreignId('user_id')
+                ->nullable() //nome do usuário
                 ->constrained('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
