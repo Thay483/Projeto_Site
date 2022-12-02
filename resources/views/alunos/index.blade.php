@@ -49,6 +49,8 @@
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger" type="submit">Deletar</button>
+                <div class="pull-right">
+                <a class="btn btn-primary" href="/home"> Voltar</a>
               </form><br><br>
         @endforeach
       </form><br>

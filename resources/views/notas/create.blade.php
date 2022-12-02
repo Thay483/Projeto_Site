@@ -17,9 +17,12 @@
                 </div>
         </div>
         <br>
+       
         <a class="btn btn-primary" href="/home"> Back</a>
         <br>
+        @role('secretario')
         <button type="submit" class="btn btn-primary">Registrar</button><br>
+        @endrole
     </form><br>
 
 </x-layout>

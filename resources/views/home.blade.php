@@ -17,25 +17,31 @@
                     {{ __('Seja bem-vindo!') }}
                 </div>
                 
-@role('aluno', 'admin')
-        <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
+@role('secretario')
+        <a class="btn btn-primary" href="/materias" role="button">Cadastro de Cursos</a>
+    <break></break>
+    <h1></h1>
+@endrole
+
+@role('admin')
+    <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
     
     <break></break>
     <h1></h1>
 
-    <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>
-    
-    <break></break>
-    <h1></h1>
-@else
-        <a class="btn btn-primary" href="/materias" role="button">Cadastro de Cursos</a>
-    
-    <break></break>
-    <h1></h1>
+    <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>  
+
 @endrole
-    </div>
-            </div>
-        </div>
-    </div>
+
+@role('aluno')
+    <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
+    
+    <break></break>
+    <h1></h1>
+
+    <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>  
+
+@endrole
+
 </div>
 @endsection

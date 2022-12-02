@@ -91,7 +91,7 @@
     </div><br>
     <div class="form-group">
     </div>
-    <button type="submit" class="btn btn-primary">Registrar</button><br>
+    <button type="submit" class="btn btn-primary" role="aluno">Registrar</button><br>
     <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Lista</a>
     <a class="btn btn-primary" href="/home" role="button">Voltar</a>
     
