@@ -38,8 +38,23 @@
     <break></break>
     <h1></h1>
 
-    <a class="btn btn-primary" href="#" role="button">Cadastro de Professor</a>
+    <a class="btn btn-primary" href="{{ route('cadastrop.index') }}" role="button">Lista de Professores</a>
+
+    <break></break>
+    <h1></h1>
+
+    <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Lista de Alunos</a>
+
+    <break></break>
+    <h1></h1>
+
+    <a class="btn btn-primary" href="{{route('cadastrop.create')}}" role="button">Cadastro de Professor</a>
     
+    <break></break>
+    <h1></h1>
+    
+    <a class="btn btn-primary" href="{{ route('alunos.create') }}" role="button">Cadastro de Alunos</a>
+
     <break></break>
     <h1></h1>
 @endif

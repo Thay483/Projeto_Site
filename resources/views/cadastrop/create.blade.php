@@ -1,14 +1,14 @@
-<x-layout title='Registro do Aluno' title2='Registro do Aluno' title3='Preencha as informações a baixo:'>
+<x-layout title='Registro do Professor' title2='Registro do Professor' title3='Preencha suas informações a baixo:'>
 
 @extends('layouts.app')
 
 @section('content')
 
-    <form class="card-body" action="{{ route('alunos.store') }}" method="POST">
+    <form class="card-body" action="{{ route('cadastrop.store') }}" method="POST">
     @csrf
     
     <div class="form-group col-md-4">
-            <label for="inputID">ID do Usuário do Aluno:</label>
+            <label for="inputID">ID do Usuário do Professor:</label>
             <select id="user_id" name="user_id" class="form-control">
                 <option selected>Selecione...</option>
                 <option>1</option>  
@@ -26,11 +26,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="inputName4">Nome Completo:</label>
-        <input type="text" class="form-control" name="nome_completo" id="nome_completo" placeholder="Nome completo do aluno">
-        </div>
-        <div class="form-group col-md-6">
-        <label for="inputFilme">Filme Favorito:</label>
-        <input type="text" class="form-control" name="filme" id="filme" placeholder=" Zack and Miri Make a Porno">
+        <input type="text" class="form-control" name="nome_completo" id="nome_completo" placeholder="Nome completo do professor">
         </div>
         <div class="form-group col-md-3">
         <label for="inputCPF">CPF:</label>
@@ -91,7 +87,7 @@
     </div><br>
     <div class="form-group">
     </div>
-    <button type="submit" class="btn btn-success">Registrar</button>
+    <button type="submit" class="btn btn-primary">Registrar</button>
     <a class="btn btn-primary" href="/home" role="button">Voltar</a>
     
     </form><br>
