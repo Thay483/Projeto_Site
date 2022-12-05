@@ -10,16 +10,15 @@ class Aluno extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'user_id',
-        'nome_completo',
-        'cpf',
-        'cep',
-        'endereço',
-        'bairro',
-        'cidade',
-        'estado',
-        'filme',
+            'user_id',
+            'nome_completo',
+            'cpf',
+            'cep',
+            'endereço',
+            'bairro',
+            'cidade',
+            'estado',
+            'filme',
     ];
 
     //aqui diz que o relacionamento é de n:n da tabela alunos para usuários

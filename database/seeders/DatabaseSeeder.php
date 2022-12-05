@@ -24,12 +24,12 @@ class DatabaseSeeder extends Seeder
                 //aqui estamos informando as novas classes Seeders criadas
                 $this->call([
                 PermissionsSeeder::class,
-                MateriasSeeder::class,
+                UsersSeeder::class,
+                ProfessoresSeeder::class,
                 AlunosSeeder::class,
                 AdministradoresSeeder::class,
-                SecretariosSeeder::class,
-                UsersSeeder::class,       
-                //ProfessoresSeeder::class,
+                SecretariosSeeder::class, 
+                MateriasSeeder::class,      
                 //NotasSeeder::class,
                 ]);
         }

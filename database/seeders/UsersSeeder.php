@@ -14,27 +14,81 @@ class UsersSeeder extends Seeder
      *
      * @return void
      */
+    
+    
     public function run()
     {
+        User::create([
+            'name' => 'Clarice',
+            'email' => 'Clarice@aluno.com',
+            'password' => hash::make('Clarice'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
 
-        // public function run(){
-        //     // for ($i=0; $i <= 9; $i++){
-        //     //     DB::table('users')->insert([
-        //     //             'id' => "$i",
-        //     //             'name' => "aluno$i",
-        //     //             'email' => "aluno$i@gmail.com",
-        //     //             'password'=>Hash::make('aluno'),
-        //     //     ])->givePermissionTo('aluno');
-        //     // }
-            
-        //     // for ($i=0; $i <= 9; $i++){
-        //     //     DB::table('users')->insert([
-        //     //             'id' => "$i",
-        //     //             'name' => "professor$i",
-        //     //             'email' => "professor$i@gmail.com",
-        //     //             'password'=>Hash::make('professor'),
-        //     //     ])->givePermissionTo('professor');
-        //     // }
-        // }
+        User::create([
+            'name' => 'Hugo',
+            'email' => 'Hugo@aluno.com',
+            'password' => hash::make('Hugo'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Daiane',
+            'email' => 'Daiane@aluno.com',
+            'password' => hash::make('Daiane'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Carla',
+            'email' => 'Carla@aluno.com',
+            'password' => hash::make('Carla'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Lorena',
+            'email' => 'Lorena@aluno.com',
+            'password' => hash::make('Lorena'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Laura',
+            'email' => 'Laura@aluno.com',
+            'password' => hash::make('Laura'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Milena',
+            'email' => 'Milena@aluno.com',
+            'password' => hash::make('Milena'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Cristiane',
+            'email' => 'Cristiane@aluno.com',
+            'password' => hash::make('Cristiane'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Caio',
+            'email' => 'Caio@aluno.com',
+            'password' => hash::make('Caio'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Stefany',
+            'email' => 'Stefany@aluno.com',
+            'password' => hash::make('Stefany '),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Rafael',
+            'email' => 'Rafael@professor.com',
+            'password' => hash::make('Rafael'),
+        ])->givePermissionTo('professor')->assignRole('professor');
+
+        User::create([
+            'name' => 'Nathan',
+            'email' => 'Nathan@professor.com',
+            'password' => hash::make('Nathan'),
+        ])->givePermissionTo('professor')->assignRole('professor');
+
     }
 }

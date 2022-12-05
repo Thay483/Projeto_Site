@@ -55,9 +55,7 @@ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvid
 php artisan optimize:clear
 ```
 
-```sh
-php artisan permission:create-permission aluno && php artisan permission:create-permission professor && php artisan permission:create-permission secretario
-```
+
 
 Acesse o projeto
 [http://localhost:8080](http://localhost:8080)
