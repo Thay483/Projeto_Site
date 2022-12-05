@@ -6,40 +6,40 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\str;
-use Illuminate\Support\Facades\DB;
 
 class AlunosSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+{   
+    public function run()
+    {
+        User::create([
+            'name' => 'Aluno_1',
+            'email' => 'aluno1@aluno.com',
+            'password' => hash::make('aluno1'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
 
-    public function run(){
-        for ($i=0; $i <= 9; $i++){
-            DB::table('users')->insert([
-                    // 'id' => "$i",
-                    'name' => "aluno$i",
-                    'email' => "aluno$i@gmail.com",
-                    'password'=>Hash::make('aluno'),
-            ]);
-            // ->givePermissionTo('aluno')
-        }
-        
-        for ($i=0; $i <= 9; $i++){
-            DB::table('alunos')->insert([
-                // 'user_id'=> "$i",
-                'nome_completo' => "aluno$i",
-                'cpf'=>"$i$i$i$i$i$i$i$i$i$i",
-                'cep'=>"$i$i$i$i$i$i$i$i",
-                'endereço'=>"casa do aluno$i",
-                'bairro'=>"bairro do aluno$i",
-                'cidade'=>"cidade do aluno$i",
-                'estado'=>"estado do aluno$i",
-                'filme'=>"Shrek",
-            ]);
-        };        
-    }   
+        User::create([
+            'name' => 'Aluno_2',
+            'email' => 'aluno2@aluno.com',
+            'password' => hash::make('aluno2'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Aluno_3',
+            'email' => 'aluno3@aluno.com',
+            'password' => hash::make('aluno3'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Aluno_4',
+            'email' => 'aluno4@aluno.com',
+            'password' => hash::make('aluno4'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+        User::create([
+            'name' => 'Aluno_5',
+            'email' => 'aluno5@aluno.com',
+            'password' => hash::make('aluno5'),
+        ])->givePermissionTo('aluno')->assignRole('aluno');
+
+    }
 }
