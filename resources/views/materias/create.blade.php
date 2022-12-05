@@ -10,7 +10,7 @@
                 <h6>Adicionar Novo Curso</h6>
             </div>
         </div>
-    </div> -->
+    </div>
 
     @if ($errors->any())
         <div class="alert alert-danger">
