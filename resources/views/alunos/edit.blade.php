@@ -12,37 +12,31 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="inputName4">Nome Completo:</label>
-            <input type="text" class="form-control" name="nome_completo" id="nome_completo" placeholder="Nome completo do aluno"
-            value="{{ $aluno->nome_completo }}">
+            <input type="text" class="form-control" name="nome_completo" id="nome_completo" placeholder="Nome completo do aluno" value="{{ $aluno->nome_completo }}">
             </div>
             <div class="form-group col-md-6">
             <label for="inputFilme">Filme Favorito:</label>
-            <input type="text" class="form-control" name="filme" id="filme" placeholder=" Zack and Miri Make a Porno"
-            value="{{ $aluno->filme }}">
+            <input type="text" class="form-control" name="filme" id="filme" placeholder=" Zack and Miri Make a Porno" value="{{ $aluno->filme }}">
             </div>
             <div class="form-group col-md-2">
             <label for="inputCPF">CPF:</label>
-            <input type="text" class="form-control" name="cpf" id="cpf"  placeholder="___.___.___-__"
-            value="{{ $aluno->cpf }}">
+            <input type="text" class="form-control" name="cpf" id="cpf"  placeholder="___.___.___-__" value="{{ $aluno->cpf }}">
             </div>
         </div><br>
 
         <h6>Moradia:</h6>
         <div class="form-group col-md-6">
             <label for="inputAddress">Endereço:</label>
-            <input type="text" class="form-control" name="endereço" id="endereço" placeholder="Rua dos Bobos, nº 0"
-            value="{{ $aluno->endereço }}">
+            <input type="text" class="form-control" name="endereço" id="endereço" placeholder="Rua dos Bobos, nº 0" value="{{ $aluno->endereço }}">
         </div>
         <div class="form-group col-md-6">
             <label for="inputBairro">Bairro:</label>
-            <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Jardim do Sol"
-            value="{{ $aluno->bairro }}">
+            <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Jardim do Sol" value="{{ $aluno->bairro }}">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="inputCity">Cidade:</label>
-            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Santa Bárbara"
-            value="{{ $aluno->cidade }}">
+            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Santa Bárbara" value="{{ $aluno->cidade }}">
             </div>
             <div class="form-group col-md-4">
             <label for="inputEstado">Estado:</label>
@@ -79,8 +73,7 @@
             </div>
             <div class="form-group col-md-2">
             <label for="inputCEP">CEP</label>
-            <input type="text" class="form-control" name="cep" id="cep" placeholder="_____-___"
-            value="{{ $aluno->cep }}">
+            <input type="text" class="form-control" name="cep" id="cep" placeholder="_____-___" value="{{ $aluno->cep }}">
             </div>
         </div><br>
         <div class="form-group">

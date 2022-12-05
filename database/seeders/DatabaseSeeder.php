@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
                 //estamos passando um array
                 //aqui estamos informando as novas classes Seeders criadas
                 $this->call([
+                PermissionsSeeder::class,
                 MateriasSeeder::class,
                 AlunosSeeder::class,
                 AdministradoresSeeder::class,
@@ -32,4 +33,5 @@ class DatabaseSeeder extends Seeder
                 //NotasSeeder::class,
                 ]);
         }
+
 }

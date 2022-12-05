@@ -18,13 +18,18 @@ class CreateMateriasTable extends Migration
             // $table->bigInteger('alunos_id')->constrained('alunos');
             // $table->bigInteger('notas_nota')->constrained('notas');
             $table->bigInteger('id_professor')->constrained('professores')->nullable();
-            $table->string('nome')->unique();
-            $table->string('desc_minima');
-            $table->integer('lim_min');
-            $table->integer('lim_max');
-            $table->string('desc_completa');
-            $table->integer('status')->nullable();
-            $table->timestamps();
+
+             //id do aluno
+                ->constrained('alunos')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+             //acho que não precisa de tabela própria
+             //id do aluno (para identificar a tabela e coluna
+                                              //usa-se --> nome da tabela no singular_coluna chave)
+                ->constrained('professores')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
         });
     }
 
