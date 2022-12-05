@@ -15,6 +15,10 @@ class CreateMateriasTable extends Migration
     {
         Schema::create('materias', function (Blueprint $table) {
             $table->id();
+            // $table->bigInteger('alunos_id')->constrained('alunos');
+            // $table->bigInteger('notas_nota')->constrained('notas');
+            $table->bigInteger('id_professor')->constrained('professores')->nullable();
+
              //id do aluno
                 ->constrained('alunos')
                 ->onDelete('cascade')
@@ -25,12 +29,7 @@ class CreateMateriasTable extends Migration
                 ->constrained('professores')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->string('nome')->unique();
-            $table->string('desc_minima');
-            $table->integer('lim_min');
-            $table->integer('lim_max');
-            $table->string('desc_completa');
-            $table->timestamps();
+
         });
     }
 

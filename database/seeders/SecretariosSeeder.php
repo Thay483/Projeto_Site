@@ -20,8 +20,9 @@ class SecretariosSeeder extends Seeder
             'name' => 'Secretaria',
             'email' => 'secretaria@secretaria.com',
             'password' => Hash::make('secretaria'),
-        ])->givePermissionTo('secretario')->assignRole('secretario');
-        
+
+        ])->givePermissionTo('secretaria')->assignRole('secretaria');
+      
 
     }
 }

@@ -5,43 +5,44 @@
 @section('content')
 
     
-    <form class="card-body" action="{{ route('alunos.update', $aluno->id) }}" method="POST">
+    <form class="card-body" action="route('cadastrop.update', $professor->id)" method="POST">
         @csrf
         @method('PUT')
-        <h6>Aluno: {{ $aluno->nome_completo }}</h6>
+        <h6>Professor: {{ $professor->nome_completo }}</h6>
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="inputName4">Nome Completo:</label>
-            <input type="text" class="form-control" name="nome_completo" id="nome_completo" placeholder="Nome completo do aluno" value="{{ $aluno->nome_completo }}">
-            </div>
-            <div class="form-group col-md-6">
-            <label for="inputFilme">Filme Favorito:</label>
-            <input type="text" class="form-control" name="filme" id="filme" placeholder=" Zack and Miri Make a Porno" value="{{ $aluno->filme }}">
+            <input type="text" class="form-control" name="nome_completo" id="nome_completo" placeholder="Nome completo do professor"
+            value="{{ $professor->nome_completo }}">
             </div>
             <div class="form-group col-md-2">
             <label for="inputCPF">CPF:</label>
-            <input type="text" class="form-control" name="cpf" id="cpf"  placeholder="___.___.___-__" value="{{ $aluno->cpf }}">
+            <input type="text" class="form-control" name="cpf" id="cpf"  placeholder="___.___.___-__"
+            value="{{ $professor->cpf }}">
             </div>
         </div><br>
 
         <h6>Moradia:</h6>
         <div class="form-group col-md-6">
             <label for="inputAddress">Endereço:</label>
-            <input type="text" class="form-control" name="endereço" id="endereço" placeholder="Rua dos Bobos, nº 0" value="{{ $aluno->endereço }}">
+            <input type="text" class="form-control" name="endereço" id="endereço" placeholder="Rua dos Bobos, nº 0"
+            value="{{ $professor->endereço }}">
         </div>
         <div class="form-group col-md-6">
             <label for="inputBairro">Bairro:</label>
-            <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Jardim do Sol" value="{{ $aluno->bairro }}">
+            <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Jardim do Sol"
+            value="{{ $professor->bairro }}">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="inputCity">Cidade:</label>
-            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Santa Bárbara" value="{{ $aluno->cidade }}">
+            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Santa Bárbara"
+            value="{{ $professor->cidade }}">
             </div>
             <div class="form-group col-md-4">
             <label for="inputEstado">Estado:</label>
             <select id="estado" name="estado" class="form-control">
-                    <option selected>{{ $aluno->estado }}</option>
+                    <option selected>{{ $professor->estado }}</option>
                     <option>Acre</option>
                     <option>Alagoas</option>
                     <option>Amapá</option>
@@ -73,13 +74,14 @@
             </div>
             <div class="form-group col-md-2">
             <label for="inputCEP">CEP</label>
-            <input type="text" class="form-control" name="cep" id="cep" placeholder="_____-___" value="{{ $aluno->cep }}">
+            <input type="text" class="form-control" name="cep" id="cep" placeholder="_____-___"
+            value="{{ $professor->cep }}">
             </div>
         </div><br>
         <div class="form-group">
         </div>
         <button type="submit" class="btn btn-success">Salvar</button>
-        <a class="btn btn-primary" href="{{ route('alunos.show', $aluno->id) }}" role="button">Voltar</a>
+        <a class="btn btn-primary" href="{{ route('cadastrop.show', $professor->id) }}" role="button">Voltar</a>
     </form><br>
 
 </x-layout>
