@@ -20,13 +20,14 @@ class Materia extends Model
         'desc_minima',
         'lim_min',
         'lim_max',
-        'id_professor',
-
+        'professor_id',     
         'desc_completa',
     ];
 
     public function alunos(){
         return $this->belongsToMany(Aluno::class);
     }
-
+    public function professores(){
+        return $this->belongsTo(Professor::class);
+    }
 }

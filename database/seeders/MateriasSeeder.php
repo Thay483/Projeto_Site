@@ -24,6 +24,7 @@ class MateriasSeeder extends Seeder
                 'lim_max' => '10',
                 'desc_completa' => 'Disciplina que orienta os ingressantes a dominar a técnica gerencial e a compreender a responsabilidade da empresa na promoção do desenvolvimento econômico e social, respeitando o meio ambiente, as leis, as pessoas e as instituições.',
                // 'status' => 'disponivel',
+                
             ]);
         
             DB::table('materias')->insert([

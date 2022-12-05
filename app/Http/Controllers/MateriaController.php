@@ -49,7 +49,7 @@ class MateriaController extends Controller
 
             // 'notas_nota' => 'required',
             // 'alunos_id' => 'required',
-            'professores_id',
+            'professor_id',
 
             'desc_minima' => 'required',
             'lim_min' => 'required',
@@ -98,7 +98,7 @@ class MateriaController extends Controller
             'nome' => 'required',
 
             // 'alunos_id'=> 'required',
-            // 'professores_id' => 'required',
+             'professor_id',
             // 'notas_nota'=> 'required',
 
             'desc_minima' => 'required',
