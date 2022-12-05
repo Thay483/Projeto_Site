@@ -8,21 +8,23 @@ use App\Models\User;
 use App\Models\Aluno;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\seeders\UsersSeeder;
 
 class AlunosSeeder extends Seeder
 {   
     public function run()
     {
-        DB::table('alunos')->insert([
-            'nome_completo'=>'Clarice Malu Cláudia dos Santos',
-            'cpf'=>'18393596254',
-            'cep'=>'64019330',
-            'endereço'=>'Rua Henrique Dias, 848',
-            'bairro'=>'Vermelha',
-            'cidade'=>'Teresina',
-            'estado'=>'Piauí',
-            'filme'=>'Shrek',
-        ]);
+        // $user->alunos()->create([
+            
+        //         'nome_completo'=>'Clarice Malu Cláudia dos Santos',
+        //         'cpf'=>'18393596254',
+        //         'cep'=>'64019330',
+        //         'endereço'=>'Rua Henrique Dias, 848',
+        //         'bairro'=>'Vermelha',
+        //         'cidade'=>'Teresina',
+        //         'estado'=>'Piauí',
+        //         'filme'=>'Shrek',
+        //     ]);
 
         DB::table('alunos')->insert([
             'nome_completo'=>'Hugo Marcelo Gael Alves',
