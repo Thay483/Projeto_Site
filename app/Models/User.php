@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
+use App\Models\Materia;
+use App\Models\User;
+use App\Models\Aluno;
 
 class User extends Authenticatable
 {
@@ -45,7 +48,11 @@ class User extends Authenticatable
 
     //as funções abaixo define que a tabela user pertence ao aluno, professor, admin e secretaria
     public function materias(){
-         return $this->belongsToMany('App/Models/Materia');
+         return $this->belongsToMany(Materia::class);
+    }
+
+    public function alunos(){
+        return $this->hasOne(Aluno::class);
     }
 
     public function professores(){

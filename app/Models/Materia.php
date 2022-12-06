@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Aluno;
 use App\Models\Professor;
 use App\Models\User;
+
 
 class Materia extends Model
 {
@@ -28,6 +30,10 @@ class Materia extends Model
 
     public function users(){
         return $this->belongsToMany(User::class);
+    }
+
+    public function alunos(){
+        return $this->belongsToMany(Aluno::class);
     }
 
 

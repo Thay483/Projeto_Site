@@ -32,6 +32,9 @@
 @role('aluno')
     <break></break>
     <h1></h1>
+    <a class="btn btn-primary" href="/materias" role="button">Lista de Cursos</a>
+    <break></break>
+    <h1></h1>
     <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
     <break></break>
     <h1></h1>
