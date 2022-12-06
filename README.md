@@ -54,7 +54,7 @@ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvid
 ```sh
 php artisan optimize:clear
 ```
-
+Gerando a 'seed' de usuários e permissões.
 ```sh
 php artisan db:seed
 ```
