@@ -55,6 +55,9 @@ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvid
 php artisan optimize:clear
 ```
 
+```sh
+php artisan db:seed
+```
 
 
 Acesse o projeto
