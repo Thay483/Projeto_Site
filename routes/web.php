@@ -70,4 +70,8 @@ Route::get('/perfil', function () {
     return view('perfil_aluno');
 });
 
+Route::get('/materias/inscricao/{id_materia}/{id_aluno}',[MateriaController::class, 'inscricao']);
+
+
+
 

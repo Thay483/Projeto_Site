@@ -43,9 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //relacionamento 1:1 de user com aluno
-    public function alunos(){
-        return $this->hasOne(Aluno::class);
+    //as funções abaixo define que a tabela user pertence ao aluno, professor, admin e secretaria
+    public function materias(){
+         return $this->belongsToMany('App/Models/Materia');
     }
 
     public function professores(){

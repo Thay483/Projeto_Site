@@ -67,6 +67,7 @@ class RegisterController extends Controller
      if ($data['permissao'] == 'aluno')
      {
         return User::create([
+            'status'=> $data['aluno'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

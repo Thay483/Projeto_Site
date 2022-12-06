@@ -39,6 +39,11 @@
             </div>
         </div>
     </div>
+    <form action="/materias/inscricao/{{$materia->id}}/{{Auth::user()->id}}"> 
+        <!-- entra no curso -->
+        @csrf
+        <button  type="submit" class="btn btn-primary"> Matricular</button>
+</form>
 
     <!-- Modal1 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -52,6 +57,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Alunos Matriculados:</h5>
       </div>
       <div class="modal-body">
+
       
         <table class="table">
         
