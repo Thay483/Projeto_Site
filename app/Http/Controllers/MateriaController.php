@@ -150,18 +150,19 @@ class MateriaController extends Controller
         $contador = $contador + 1;
         //$notasum = $notasum + $notas;
         }
+
         
 
 
-        if ($contador < $materia->lim_min){
+        if ($contador - 1 < $materia->lim_min){
             $materia->status = 0;
         }
 
-        elseif($contador <= $materia->lim_min){
+        elseif($contador - 1 <= $materia->lim_min){
             $materia->status = 1;
         }
 
-        elseif($contador == $materia->lim_max){
+        elseif($contador - 1 == $materia->lim_max){
             $materia->status = 2;
         }
         else{

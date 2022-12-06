@@ -81,6 +81,9 @@
         </table>
       </div>
       <div class="modal-footer">
+      @role('secretario')
+        <h7 style="position: relative; left: -25%;"> Quantidade de alunos matriculados: {{sizeof($materia->alunos)}} </h7>
+        @endrole
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
