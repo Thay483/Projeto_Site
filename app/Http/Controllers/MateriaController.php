@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Materia;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Aluno;
 
 class MateriaController extends Controller
 {
@@ -135,15 +136,50 @@ class MateriaController extends Controller
         return redirect()->route('materias.index')
                         ->with('success','Product deleted successfully');
     }
-    public function inscricao($id_materia,$id_aluno){
-        //if (status == 1){}
-        //if (status == 2){back}
 
-        $curso = Materia::findOrFail($id_materia);
-        $aluno = User::findOrFail($id_aluno);
+    public function inscricao($id_materia,$id_aluno){
+
+        $materia = Materia::findOrFail($id_materia);
+        $aluno = Aluno::findOrFail($id_aluno);
+        //$notas = < pegar nota dos foreach
+        
+        
+        $contador = 0;
+        //$notasum = 0;
+        foreach($materia->alunos as $status_materia){
+        $contador = $contador + 1;
+        //$notasum = $notasum + $notas;
+        }
+        
+
+
+        if ($contador < $materia->lim_min){
+            $materia->status = 0;
+        }
+
+        elseif($contador <= $materia->lim_min){
+            $materia->status = 1;
+        }
+
+        elseif($contador == $materia->lim_max){
+            $materia->status = 2;
+        }
+        else{
+            $materia->status = 3;
+        }
+
+        // 0 = matriculas abertas, min nao chegado
+        // 1 = matriculas abertas, min chego
+        // 2 = matriculas encerradas
+        // 3 = undefined / deu problema
+
+
+        $materia->save();
+
 
         $aluno->materias()->attach($id_materia);
-        redirect->back();
+        return redirect()->route('materias.index')
+        ->with('success','Matriculado com sucesso!');
         
     }
 }

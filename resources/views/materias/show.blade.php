@@ -39,12 +39,14 @@
             </div>
         </div>
     </div>
+        @if($materia->status < 2)
     <form action="/materias/inscricao/{{$materia->id}}/{{Auth::user()->id}}"> 
         <!-- entra no curso -->
         @csrf
+       
         <button  type="submit" class="btn btn-primary"> Matricular</button>
 </form>
-
+        @endif
     <!-- Modal1 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -63,15 +65,17 @@
         
         <thead>
             <tr>
-            <th scope="col">ID do Aluno</th>
+            <th scope="col">Aluno</th>
             <th scope="col">Nota</th>
             </tr>
         </thead>
         <tbody>
+            @foreach($materia->alunos as $alunomateria)
             <tr>
-            <td>{{$materia->alunos_id}}</td>
-            <td>{{$materia->notas_nota}}</td>
+            <td>{{$alunomateria->nome_completo}}</td>
+            <!-- <td>{{$alunomateria->notas_nota}}</td> -->
             </tr>
+            @endforeach
         </tbody>
         
         </table>
