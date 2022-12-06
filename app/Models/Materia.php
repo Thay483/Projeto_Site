@@ -20,8 +20,7 @@ class Materia extends Model
         'desc_minima',
         'lim_min',
         'lim_max',
-        'id_professor',
-
+        'professor_id',     
         'desc_completa',
     ];
 
@@ -35,3 +34,4 @@ class Materia extends Model
     }
 
 }
+

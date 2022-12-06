@@ -17,7 +17,7 @@
                 </div>
         </div>
         <br>
-        <a class="btn btn-primary" href="/home"> Back</a>
+        <a class="btn btn-primary" href="{{ route('professores.index') }}"> Back</a>
         <br>
         <button type="submit" class="btn btn-primary">Registrar</button><br>
     </form><br>

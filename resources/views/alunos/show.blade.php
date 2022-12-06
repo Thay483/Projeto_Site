@@ -33,7 +33,7 @@
         <label for="inputCEP">CEP: {{ $aluno->cep }}</label>
         </div><br>
         <a class="btn btn-success" href="{{ route('alunos.edit', $aluno->id) }}" role="button">Editar</a>
-        <a class="btn btn-primary" href="/home" role="button">Voltar</a>
+        <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Voltar</a>
         
 </form><br>
 

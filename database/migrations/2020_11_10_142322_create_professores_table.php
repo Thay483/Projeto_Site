@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('professores', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id') //nome do usuário
-                ->constrained()
+                ->nullable()
+                ->constrained('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->text('nome_completo');
