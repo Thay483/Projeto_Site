@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Aluno;
+use App\Models\Professor;
+use App\Models\User;
+
 
 class Materia extends Model
 {
@@ -26,7 +29,7 @@ class Materia extends Model
     ];
 
     public function users(){
-        return $this->belongsToMany('App/Models/User');
+        return $this->belongsToMany(User::class);
     }
 
     public function alunos(){
@@ -35,7 +38,7 @@ class Materia extends Model
 
 
     public function professor(){
-        return $this->belongsToMany('App/Models/Professor');
+        return $this->belongsToMany(Professor::class);
     }
 
 }
