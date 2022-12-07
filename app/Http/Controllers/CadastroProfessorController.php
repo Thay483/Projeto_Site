@@ -30,15 +30,15 @@ class CadastroProfessorController extends Controller
 
     }
 
-    public function show(Professor $professore){
+    public function show(Professor $professor){
 
-        return view('cadastrop.show')->with('professore',$professore);
+        return view('cadastrop.show')->with('professor',$professor);
 
     }
 
     public function edit(Professor $professor){
 
-        return view('cadastrop.edit', compact('professore'));
+        return view('cadastrop.edit', compact('professor'));
 
     }
 
