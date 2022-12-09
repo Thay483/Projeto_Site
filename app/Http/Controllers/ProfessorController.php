@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Professor;
-use App\Models\Aluno;
-use App\Models\Nota;
 use App\Models\Materia;
 
 class ProfessorController extends Controller
