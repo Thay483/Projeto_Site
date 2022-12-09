@@ -1,8 +1,17 @@
-<x-layout title='Registro de Notas' title2='Registro de Notas' title3='Registro das Notas dos Alunos:'>
 
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Registro de Notas</div>
+
+                <div class="card-body">
+                Registro das Notas dos Alunos:
+                </div>
 
     <form class="card-body" action="{{ route('notas.store') }}" method="POST">
         @csrf
@@ -21,6 +30,11 @@
         <br>
         <button type="submit" class="btn btn-primary">Registrar</button><br>
     </form><br>
-
-</x-layout>
+    </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

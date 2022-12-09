@@ -1,9 +1,16 @@
-<x-layout title='Registro do Professor' title2='Registro do Professor' title3='Preencha suas informações a baixo:'>
-
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Registro do Professor</div>
 
+                <div class="card-body">
+                Preencha as informações abaixo:
+                </div>
     <form class="card-body" action="{{ route('cadastrop.store') }}" method="POST">
     @csrf
     
@@ -91,6 +98,11 @@
     <a class="btn btn-primary" href="/home" role="button">Voltar</a>
     
     </form><br>
-
-</x-layout>
+    </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

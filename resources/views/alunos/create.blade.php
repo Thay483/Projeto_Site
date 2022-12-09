@@ -1,10 +1,17 @@
-<x-layout title='Registro do Aluno' title2='Registro do Aluno' title3='Preencha as informações a baixo:'>
-
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Registro do Aluno</div>
 
-    <form class="card-body" action="{{ route('alunos.store') }}" method="POST">
+                <div class="card-body">
+                Preencha as informações a baixo:
+                </div>
+                <form class="card-body" action="{{ route('alunos.store') }}" method="POST">
     @csrf
     
     <div class="form-group col-md-4">
@@ -95,6 +102,11 @@
     <a class="btn btn-primary" href="/home" role="button">Voltar</a>
     
     </form><br>
-
-</x-layout>
+    </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

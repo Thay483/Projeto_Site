@@ -1,8 +1,16 @@
-<x-layout title='Lista de Alunos' title2='Lista dos Alunos' title3='Abaixo estão os registros dos alunos:'>
-
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Lista dos Alunos</div>
+
+                <div class="card-body">
+                Abaixo estão os registros dos alunos:
+                </div>
 
 <table class="table card-body">
     <thead>
@@ -36,6 +44,11 @@
   </div>
 </div>
 </div>
-
-</x-layout>
+</div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

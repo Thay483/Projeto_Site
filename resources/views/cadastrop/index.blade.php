@@ -1,9 +1,16 @@
-<x-layout title='Lista de Professores' title2='Lista de Prefessores' title3='A baixo estão a lista de professores:'>
-
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Lista de Prefessores</div>
 
+                <div class="card-body">
+                A baixo estão a lista de professores:
+                </div>
     <table class="table card-body">
     <thead>
         <tr>
@@ -35,6 +42,11 @@
   </div>
 </div>
 </div>
-
-</x-layout>
+</div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

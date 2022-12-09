@@ -1,9 +1,16 @@
-<x-layout title='Perfil do(a) Professor(a)' title2='Meu Registro' title3='Perfil do(a) Professor(a): {{ $professor-> nome_completo}}'>
-
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Meu Registro</div>
 
+                <div class="card-body">
+                Perfil do(a) Professor(a): {{ $professor-> nome_completo}}
+                </div>
 <form class="card-body">   
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -33,6 +40,11 @@
         <a class="btn btn-primary" href="{{ route('cadastrop.index')}}" role="button">Voltar</a>
         
 </form><br>
-
-</x-layout>
+</div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

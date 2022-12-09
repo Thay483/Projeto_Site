@@ -1,10 +1,16 @@
-<x-layout title='Editar Perfil' title2='Editar Perfil' title3='Edite suas informações abaixo:'>
-
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Editar Perfil</div>
 
-    
+                <div class="card-body">
+                Edite suas informações abaixo:
+                </div>
     <form class="card-body" action="route('cadastrop.update', $professor->id)" method="POST">
         @csrf
         @method('PUT')
@@ -83,6 +89,11 @@
         <button type="submit" class="btn btn-success">Salvar</button>
         <a class="btn btn-primary" href="{{ route('cadastrop.show', $professor->id) }}" role="button">Voltar</a>
     </form><br>
-
-</x-layout>
+    </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection
