@@ -43,8 +43,9 @@
     <form action="/materias/inscricao/{{$materia->id}}/{{Auth::user()->id}}"> 
         <!-- entra no curso -->
         @csrf
-       
+        @role('aluno')
         <button  type="submit" class="btn btn-primary"> Matricular</button>
+        @endrole
 </form>
         @endif
     <!-- Modal1 -->
@@ -67,6 +68,9 @@
             <tr>
             <th scope="col">Aluno</th>
             <th scope="col">Nota</th>
+            <!-- @role('professor')
+            <th scope="col">Adicionar Notas </th>
+            @endrole -->
             </tr>
         </thead>
         <tbody>

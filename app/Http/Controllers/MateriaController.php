@@ -150,7 +150,7 @@ class MateriaController extends Controller
         $contador = $contador + 1;
         //$notasum = $notasum + $notas;
         }
-
+        //$media = $notasum/$contador
         
 
 
