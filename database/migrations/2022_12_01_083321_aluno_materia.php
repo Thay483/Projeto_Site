@@ -17,6 +17,7 @@ return new class extends Migration
         $table->foreignId('aluno_id')->constrained('alunos')->onDelete('cascade');
         $table->foreignId('materia_id')->constrained('materias')->onDelete('cascade');
         $table->float('notas')->nullable()->onDelete('cascade');
+        $table->timestamps();
         });
         
     }

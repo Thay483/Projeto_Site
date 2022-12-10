@@ -84,13 +84,32 @@
             <tr>
             <th scope="col">Aluno</th>
             <th scope="col">Nota</th>
+            <th scope="col">Dar nota</th>
             </tr>
         </thead>
         <tbody>
             @foreach($materia->alunos as $alunomateria)
             <tr>
             <td>{{$alunomateria->nome_completo}}</td>
-            <!-- <td>{{$alunomateria->notas_nota}}</td> -->
+            <td>
+                @foreach($notas as $nota)
+                @if($nota->aluno_id==$alunomateria->id && $nota->materia_id == $materia->id)
+                {{$nota->notas}}
+                @endif
+                @endforeach
+                </td>
+            <!-- role -->
+            <td> 
+                <form action="/materias/darnota/{{ $materia->id }}/{{ $alunomateria->id }}" method="post">
+                @csrf
+                <div class="input-group mb-3">
+                <input name="{{ $alunomateria->id }}" id="{{ $alunomateria->id }}" type="text" class="form-control" placeholder="Nota" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Enviar</button></form>
+                </div>
+                </div>
+            </td>
+            <!-- endrole -->
             </tr>
             @endforeach
         </tbody>
