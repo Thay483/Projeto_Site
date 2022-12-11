@@ -78,11 +78,17 @@ class MateriaController extends Controller
         $notas=AlunoMateria::all();
         $notasomatoria =0;
         $contador=0;
+        $media=0;
         foreach($notas as $nota){
-            $contador++;
-            $notasomatoria = $notasomatoria + $nota;
+            if($nota->materia_id == $materia->id){
+            $contador= $contador +1;
+            $notasomatoria = $notasomatoria + $nota->notas;
         }
-        $media = $notasomatoria/$contador;
+        }
+            if($contador!=0){
+            $media = $notasomatoria/$contador;
+            }
+       
 
 
 

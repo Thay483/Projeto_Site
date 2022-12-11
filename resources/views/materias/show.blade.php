@@ -84,7 +84,9 @@
             <tr>
             <th scope="col">Aluno</th>
             <th scope="col">Nota</th>
+            @role('professor')
             <th scope="col">Dar nota</th>
+            @endrole
             </tr>
         </thead>
         <tbody>
@@ -98,7 +100,7 @@
                 @endif
                 @endforeach
                 </td>
-            <!-- role -->
+            @role('professor')
             <td> 
                 <form action="/materias/darnota/{{ $materia->id }}/{{ $alunomateria->id }}" method="post">
                 @csrf
@@ -109,16 +111,19 @@
                 </div>
                 </div>
             </td>
-            <!-- endrole -->
+            @endrole
             </tr>
             @endforeach
         </tbody>
         
         </table>
       </div>
-      <div class="modal-footer">
+       <div class="modal-footer">
+      @role('secretario')
+        <h7 style="position: relative; left: -10%;"> Quantidade de alunos matriculados: {{sizeof($materia->alunos)}} </h7>
+        <h7> Média da Turma: {{$media}} </h7>
+        @endrole
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
     </div>
   </div>
 @endsection
