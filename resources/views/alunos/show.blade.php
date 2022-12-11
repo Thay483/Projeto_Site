@@ -1,8 +1,10 @@
-<x-layout title='Perfil do(a) {{ $aluno-> nome_completo}}' title2='Meu Registro' title3='Perfil do(a) {{ $aluno-> nome_completo}}'>
+<x-layout title='Perfil do(a) {{ $aluno->nome_completo}}' title2='Meu Registro' title3='Perfil do(a) {{ $aluno-> nome_completo}}'>
 
 @extends('layouts.app')
 
 @section('content')
+
+
 
 <form class="card-body">   
     <div class="form-row">
@@ -32,7 +34,7 @@
         <div class="form-group col-md-2">
         <label for="inputCEP">CEP: {{ $aluno->cep }}</label>
         </div><br>
-        <a class="btn btn-success" href="{{ route('alunos.edit', $aluno->id) }}" role="button">Editar</a>
+        <a class="btn btn-success" href="{#}" role="button">Editar</a>
         <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Voltar</a>
         
 </form><br>
