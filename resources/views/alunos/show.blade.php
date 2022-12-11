@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -9,9 +8,11 @@
             <div class="card">
                 <div class="card-header">Meu Registro</div>
 
+
                 <div class="card-body">
                 Perfil do(a) {{ $aluno-> nome_completo}}
                 </div>
+
 <form class="card-body">   
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -40,9 +41,11 @@
         <div class="form-group col-md-2">
         <label for="inputCEP">CEP: {{ $aluno->cep }}</label>
         </div><br>
+
         @role('aluno')
         <a class="btn btn-success" href="{{ route('alunos.edit', $aluno->id) }}" role="button">Editar</a>
         @endrole
+
         <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Voltar</a>
         
 </form><br>

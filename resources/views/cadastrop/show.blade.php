@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <body>
 <div class="container">
     <div class="row justify-content-center">
@@ -11,8 +13,12 @@
                 <div class="card-body">
                 Perfil do(a) Professor(a): {{ $professor-> nome_completo}}
                 </div>
+
 <form class="card-body">   
     <div class="form-row">
+    <p>
+    <img src="/uploads/avatars/{{ $professor->foto_perfil }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">  
+      </p>
         <div class="form-group col-md-6">
         <label for="inputName4">Nome Completo: {{ $professor->nome_completo }}</label>
         </div>
@@ -37,7 +43,7 @@
         <label for="inputCEP">CEP: {{ $professor->cep }}</label>
         </div><br>
         <a class="btn btn-success" href="route('cadastrop.edit', $professor->id)" role="button">Editar</a>
-        <a class="btn btn-primary" href="{{ route('cadastrop.index')}}" role="button">Voltar</a>
+        <a class="btn btn-primary" href="{#}" role="button">Voltar</a>
         
 </form><br>
 </div>

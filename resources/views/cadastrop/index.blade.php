@@ -29,7 +29,7 @@
     <a class="list-group-item list-group-item-action" >{{ $professor->nome_completo }}</a>
     </th>
     <th>
-    <a class="btn btn-success" href="{{ route('cadastrop.show', $professor->id)}}" role="button">Visualizar</a>
+    <a class="btn btn-success" href="/cadastrop/show/{{$professor->id}}" role="button">Visualizar</a>
     </th>
     </tr>
     @endforeach

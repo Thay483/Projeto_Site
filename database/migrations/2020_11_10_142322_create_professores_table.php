@@ -20,6 +20,7 @@ return new class extends Migration
                 ->constrained('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+            $table->string('foto_perfil')->default('default.jpg');
             $table->text('nome_completo');
             $table->string('cpf');
             $table->integer('cep'); // utilizar essa informacao juntamente com a API para descobrir a moradia

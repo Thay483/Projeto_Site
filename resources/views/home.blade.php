@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('Seja bem-vindo!') }}
+
                 </div>
     @role('admin')
     <div class="container"> 
@@ -86,6 +87,7 @@
         </div>
     </div>
     @endrole
+
     </div>
             </div>
         </div>

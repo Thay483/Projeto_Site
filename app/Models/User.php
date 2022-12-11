@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use App\Models\Materia;
-use App\Models\User;
+//use App\Models\User;
 use App\Models\Aluno;
 
 class User extends Authenticatable

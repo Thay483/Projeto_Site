@@ -30,9 +30,16 @@ class CadastroProfessorController extends Controller
 
     }
 
-    public function show(Professor $professor){
+    public function show($id){
 
-        return view('cadastrop.show')->with('professor',$professor);
+        $professor=professor::findorfail($id);
+        //return view('alunos.show')->with('aluno',$aluno);
+        // $user=Auth::user();
+        // $alunos=aluno::where('user_id','=','$user->id');
+        // foreach($alunos as $aluno1){}
+        // $aluno = $aluno1;
+         return view('cadastrop.show',['professor' => $professor]);
+        
 
     }
 

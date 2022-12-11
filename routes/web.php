@@ -53,7 +53,7 @@ Route::resource('notas', NotaController::class);
 
 Route::resource('professores', ProfessorController::class);
 
-Route::resource('cadastrop', CadastroProfessorController::class);
+Route::get('/cadastrop/show/{id}', [CadastroProfessorController::class,'show']);
 
 // Route::get('/requisicao', function () {
 //     $json = \Illuminate\Support\Facades\Http::get('https://learn-laravel.cf/movie/1')->body();
@@ -66,9 +66,8 @@ Route::get('/meus-cursos', function () {
     return view('dashboard');
 });
 
-Route::get('/perfil', function () {
-    return view('perfil_aluno');
-});
+
+    Route::get('/perfil/{id}', [App\Http\Controllers\AlunoController::class, 'show']);
 
 Route::get('/materias/inscricao/{id_materia}/{id_aluno}',[MateriaController::class, 'inscricao']);
 
