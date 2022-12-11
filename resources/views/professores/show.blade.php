@@ -1,8 +1,17 @@
-<x-layout title='Lista de Alunos Professor' title2='Lista de Alunos do Prefessor' title3='Abaixo estão a lista dos alunos matriculados no curso:'>
 
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Lista de Alunos do Prefessor</div>
+
+                <div class="card-body">
+                Abaixo estão a lista dos alunos matriculados no curso:
+                </div>
 
     <!-- <h2>Lista de Cursos</h2> -->
     <table class="table card-body">
@@ -39,6 +48,11 @@
   </div>
 </div>
 </div>
-
-</x-layout>
+</div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

@@ -1,8 +1,17 @@
-<x-layout title='Lista de Cursos Professor' title2='Lista de Cursos do Prefessor' title3='A baixo estão a lista de cursos ministrados:'>
 
 @extends('layouts.app')
 
 @section('content')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Lista de Cursos do Prefessor</div>
+
+                <div class="card-body">
+                A baixo estão a lista de cursos ministrados:
+                </div>
 
     <!-- <h2>Lista de Cursos</h2> -->
     <table class="table card-body">
@@ -17,10 +26,10 @@
     @foreach ($materias as $materia)
     <tr>
     <th>
-    <a href="#" class="list-group-item list-group-item-action" >{{ $materia->id }}</a>
+    <a class="list-group-item list-group-item-action" >{{ $materia->id }}</a>
     </th>
     <th>
-    <a href="#" class="list-group-item list-group-item-action" >{{ $materia->nome }}</a>
+    <a class="list-group-item list-group-item-action" >{{ $materia->nome }}</a>
     </th>
     <th>
     <a type="button" class="btn btn-success" href="{{ route('professores.show', $materia->id) }}">Visualizar</a>
@@ -37,5 +46,11 @@
 </div>
 </div>
 
-</x-layout>
+</div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 @endsection

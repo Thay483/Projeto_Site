@@ -6,6 +6,7 @@ use App\Models\Materia;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Aluno;
+use App\Models\AlunoMateria;
 
 class MateriaController extends Controller
 {
@@ -73,7 +74,27 @@ class MateriaController extends Controller
      */
     public function show(Materia $materia)
     {
-        return view('materias.show',compact('materia'));
+        // $notas=AlunoMateria::where('materia_id', '=','1');
+        $notas=AlunoMateria::all();
+        $notasomatoria =0;
+        $contador=0;
+        $media=0;
+        foreach($notas as $nota){
+            if($nota->materia_id == $materia->id){
+            $contador= $contador +1;
+            $notasomatoria = $notasomatoria + $nota->notas;
+        }
+        }
+            if($contador!=0){
+            $media = $notasomatoria/$contador;
+            }
+       
+
+
+
+
+        return view('materias.show',compact('materia'),["notas" => $notas,"media"=>$media]);
+        
     }
 
     /**
@@ -182,4 +203,19 @@ class MateriaController extends Controller
         ->with('success','Matriculado com sucesso!');
         
     }
+
+    public function darnota($id_materia,$id_aluno,Request $request){
+        if (is_numeric($request->$id_aluno)!=1){return back()
+            ->with('error','Houve algum erro nos inputs.');}
+
+        $materia = Materia::findOrFail($id_materia);
+        $aluno = Aluno::findOrFail($id_aluno);
+        $nota = AlunoMateria::where('aluno_id','=',$id_aluno)->where('materia_id', '=',$id_materia)->update([
+            'notas'=> $request->$id_aluno]);
+
+        return back();  
+
+    }
+
+    
 }

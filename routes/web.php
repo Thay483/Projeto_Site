@@ -71,6 +71,6 @@ Route::get('/meus-cursos', function () {
 
 Route::get('/materias/inscricao/{id_materia}/{id_aluno}',[MateriaController::class, 'inscricao']);
 
-
+Route::post('/materias/darnota/{id_materia}/{id_aluno}',[MateriaController::class, 'darnota']);
 
 
