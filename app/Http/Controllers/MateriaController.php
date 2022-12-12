@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Aluno;
 use App\Models\AlunoMateria;
+use App\Models\Professor;
 
 class MateriaController extends Controller
 {
@@ -162,6 +163,7 @@ class MateriaController extends Controller
 
         $materia = Materia::findOrFail($id_materia);
         $aluno = Aluno::findOrFail($id_aluno);
+        //$aluno = Aluno::where($id_aluno,'=','user_id');
         //$notas = < pegar nota dos foreach
         
         
@@ -217,5 +219,35 @@ class MateriaController extends Controller
 
     }
 
-    
+    public function inscricao_prof($id_materia,$id_user){
+        $id_user = $id_user-10;
+        $materia = Materia::findOrFail($id_materia);
+        $professor = Professor::findOrFail($id_user);
+        //$notas = < pegar nota dos foreach
+        
+        
+        $contador = 0;
+        // //$notasum = 0;
+        foreach($materia->professor as $status_materia_professor){
+         $contador = $contador + 1;
+         }
+        
+
+
+         if ($contador <= 1){
+             $materia->status_prof = 1;
+         }
+
+        // 0 = nao tem professor > liberar a inscricao
+        // 1 = ja tem professor > bloquear a inscricao
+
+        $materia->save(); 
+
+
+        $professor->materias()->attach($id_materia);
+        return redirect()->route('materias.index')
+        ->with('success','Inscrito com sucesso! Boa vinda, professor!');
+        
+    }   
+
 }

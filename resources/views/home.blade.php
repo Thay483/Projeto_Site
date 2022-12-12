@@ -35,6 +35,15 @@
             <a class="btn btn-primary" href="{{ route('alunos.index') }}" role="button">Lista de Alunos</a>
             <break></break>
             <h1></h1>
+
+            <h1></h1>
+            <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
+            <break></break>
+
+            <h1></h1>
+            <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>
+            <break></break>
+            
         </div>
     </div>
     @endrole
@@ -61,20 +70,14 @@
         <div class="row justify-content-center">
             <a class="btn btn-primary" href="/materias" role="button">Lista de Cursos</a>
             <break></break>
-            <h1></h1>
-            <a class="btn btn-primary" href="{{route('cursos.index')}}" role="button">Cursos Matriculados</a>
-            <break></break>
-            <h1></h1>
-            <a class="btn btn-primary" href="{{route('notas.create')}}" role="button">Notas dos Alunos</a>
-            <break></break>
-            <h1></h1>
+
         </div>
     </div>
     @endrole
     @role('professor')
     <div class="container"> 
         <div class="row justify-content-center">
-            <a class="btn btn-primary" href="{{route('professores.index')}}" role="button">Cursos do Professor</a>
+            <a class="btn btn-primary" href="/materias" role="button">Lista de Cursos</a>
             <break></break>
             <h1></h1>
             <a class="btn btn-primary" href="#" role="button">Perfil do Professor</a>

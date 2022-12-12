@@ -28,6 +28,7 @@ class CreateMateriasTable extends Migration
             $table->integer('lim_max');
             $table->string('desc_completa');
             $table->integer('status')->nullable();
+            $table->integer('status_prof')->nullable();
             $table->timestamps();
         });
     }

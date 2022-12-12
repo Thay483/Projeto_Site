@@ -29,7 +29,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Professor:</strong>
-                        <td>(Nome do Professor)</td>
+                        <td>{{$materia->professores->nome_completo}}</td>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -51,8 +51,18 @@
                         @csrf
                         <button type="submit" class="btn btn-primary"> Matricular</button>
                     </form>
-                    @endrole
                     @endif
+                    @endrole
+                    @role('professor')
+                    @if($materia->status_prof != 1)
+                    <form action="/materias/inscricao_prof/{{$materia->id}}/{{Auth::user()->id}}"> 
+                        <!-- entra no curso -->
+                        @csrf
+                        <button type="submit" class="btn btn-primary"> Lecionar!</button>
+                    </form>
+                    @endif
+                    @endrole
+                    
                 </div>
             
             </div>
@@ -123,6 +133,10 @@
         <h7 style="position: relative; left: -10%;"> Quantidade de alunos matriculados: {{sizeof($materia->alunos)}} </h7>
         <h7> Média da Turma: {{$media}} </h7>
         @endrole
+    @role('professor')
+        <h7 style="position: relative; left: -10%;"> Quantidade de alunos matriculados: {{sizeof($materia->alunos)}} </h7>
+        <h7> Média da Turma: {{$media}} </h7>
+    @endrole
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
     </div>
   </div>
