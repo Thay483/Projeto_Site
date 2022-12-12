@@ -92,7 +92,7 @@
         </div><br>
         <div class="form-group">
         </div>
-        <button type="submit" class="btn btn-success">Salvar</button>
+        <button type="submit" class="btn btn-success">Salvar</button>       
         <a class="btn btn-primary" href="{{ route('alunos.show', $aluno->id) }}" role="button">Voltar</a>
     </form><br>
     </div>

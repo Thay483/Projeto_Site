@@ -16,19 +16,7 @@
     
     <div class="form-group col-md-4">
             <label for="inputID">ID do Usuário do Professor:</label>
-            <select id="user_id" name="user_id" class="form-control">
-                <option selected>Selecione...</option>
-                <option>1</option>  
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
+            <input type="text" class="form-control" name="user_id" id="user_id" placeholder="ID do Usuário do Professor">
     </div>    
     <div class="form-row">
         <div class="form-group col-md-6">

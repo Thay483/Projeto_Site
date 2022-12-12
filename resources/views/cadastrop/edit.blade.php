@@ -15,6 +15,15 @@
         @csrf
         @method('PUT')
         <h6>Professor: {{ $professor->nome_completo }}</h6>
+        <label for="inputfoto_perfil">Foto de Perfil:</label>
+            <select id="foto_perfil" name="foto_perfil" class="form-group col-md-6">
+                    <option selected>{{ $professor->foto_perfil }}</option>
+                    <option>foto1.jpg</option>
+                    <option>foto2.jpg</option>
+                    <option>foto3.jpg</option>
+                    <option>foto4.jpg</option>
+                </select>
+                <br></br>
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="inputName4">Nome Completo:</label>
