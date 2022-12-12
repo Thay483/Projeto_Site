@@ -29,7 +29,9 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Professor:</strong>
-                        <td>{{$materia->professores->nome_completo}}</td>
+                    @foreach($materia->professor as $professormateria)
+                        <td>{{$professormateria->nome_completo}}</td>
+                        @endforeach
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
