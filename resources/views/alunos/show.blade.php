@@ -42,7 +42,7 @@
         <label for="inputCEP">CEP: {{ $aluno->cep }}</label>
         </div><br>
 
-        @role('aluno')
+        @role('secretario')
         <a class="btn btn-success" href="{{ route('alunos.edit', $aluno->id) }}" role="button">Editar</a>
         @endrole
 

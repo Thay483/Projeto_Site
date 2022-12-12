@@ -81,7 +81,7 @@
         
             
                 <div>
-                    @role('secretaria')
+                    @role('secretario')
                     <a class="btn btn-success" href="{{ route('materias.create') }}"> Criar Novo Curso</a>
                     @endrole
                     <a class="btn btn-primary" href="/home"> Voltar</a>

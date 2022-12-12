@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Professor;
+use Database\Seeders\ProfessoresSeeder;
 
 class CadastroProfessorController extends Controller
 {
@@ -16,7 +17,8 @@ class CadastroProfessorController extends Controller
         
     }
 
-    public function create(){
+    public function create()
+    {
 
         return view('cadastrop.create');
 
@@ -43,18 +45,19 @@ class CadastroProfessorController extends Controller
 
     }
 
-    public function edit(Professor $professor){
+    public function edit($id){
 
+        $professor=professor::findorfail($id);
         return view('cadastrop.edit', compact('professor'));
 
     }
+
 
     public function update(Request $request, Professor $professor){
 
         $professor->fill($request->all())->save();
 
-        return redirect()->route('cadastrop.index');
+        return redirect()->route('cadastrop.show');
 
     }
-
 }

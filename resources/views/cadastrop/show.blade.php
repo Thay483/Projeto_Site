@@ -42,8 +42,10 @@
         <div class="form-group col-md-2">
         <label for="inputCEP">CEP: {{ $professor->cep }}</label>
         </div><br>
-        <a class="btn btn-success" href="route('cadastrop.edit', $professor->id)" role="button">Editar</a>
-        <a class="btn btn-primary" href="{#}" role="button">Voltar</a>
+        @role('secretario')
+        <a class="btn btn-success" href="{{ route('cadastrop.edit', $professor->id) }}" role="button">Editar</a>
+        @endrole
+        <a class="btn btn-primary" href="{{ route('cadastrop.index') }}" role="button">Voltar</a>
         
 </form><br>
 </div>

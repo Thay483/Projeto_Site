@@ -32,6 +32,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+
 //aqui conterá uma listinha com os usuários registrados pelo sistema de login
 Route::get('/listar-usuarios', [App\Http\Controllers\UserController::class, 'index']);
 
@@ -53,6 +55,9 @@ Route::resource('notas', NotaController::class);
 
 Route::resource('professores', ProfessorController::class);
 
+Route::resource('cadastrop', CadastroProfessorController::class);
+
+
 Route::get('/cadastrop/show/{id}', [CadastroProfessorController::class,'show']);
 
 // Route::get('/requisicao', function () {
@@ -61,6 +66,8 @@ Route::get('/cadastrop/show/{id}', [CadastroProfessorController::class,'show']);
 // });
 
 Route::get('/dashboard', [CursoController::class, 'dashboard']);
+
+
 
 Route::get('/meus-cursos', function () {
     return view('dashboard');
