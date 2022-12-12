@@ -4,19 +4,30 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Materia;
+use App\Models\Aluno;
+use App\Models\User;
 
 class Professor extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    protected $table = 'professores';
+
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'user_id', //nome do usuário
+        'nome_completo',
+        'cpf',
+        'cep',
+        'endereço',
+        'bairro',
+        'cidade',
+        'estado',
     ];
+
+    public function materias(){
+        return $this->belongsToMany(Materia::class);
+    }
+
 }
+

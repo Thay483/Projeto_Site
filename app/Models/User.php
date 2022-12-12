@@ -2,22 +2,26 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
+use App\Models\Materia;
+//use App\Models\User;
+use App\Models\Aluno;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    
+     protected $fillable = [
         'name',
         'email',
         'password',
@@ -41,4 +45,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //as funções abaixo define que a tabela user pertence ao aluno, professor, admin e secretaria
+    public function materias(){
+         return $this->belongsToMany(Materia::class);
+    }
+
+    public function alunos(){
+        return $this->hasOne(Aluno::class);
+    }
+
+    public function professores(){
+        return $this->hasOne(Professor::class);
+    }
+
+
+
 }

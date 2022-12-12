@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
+
+    protected $table = 'cursos';
+
+    protected $fillable = [
+        'name',
+    ];
+
+    public function aluno(){
+        return $this->belongsToMany('App/Models/Aluno');
+    }
+
+    public function professor(){
+        return $this->belongsToMany('App/Models/Professor');
+    }
+
 }

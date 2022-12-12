@@ -3,7 +3,13 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Seeder;
+use App\Models\Administrador;
+use App\Models\Secretario;
+use App\Models\Aluno;
+use App\Models\User;
+use App\Models\Materia;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,12 +19,18 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-    }
+       {
+                //estamos passando um array
+                //aqui estamos informando as novas classes Seeders criadas
+                $this->call([
+                PermissionsSeeder::class,
+                UsersSeeder::class,
+                //ProfessoresSeeder::class,
+                //AlunosSeeder::class,
+                AdministradoresSeeder::class,
+                SecretariosSeeder::class, 
+                MateriasSeeder::class,      
+                //NotasSeeder::class,
+                ]);
+        }
 }
