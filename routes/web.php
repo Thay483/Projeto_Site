@@ -80,4 +80,5 @@ Route::get('/materias/inscricao/{id_materia}/{id_aluno}',[MateriaController::cla
 
 Route::post('/materias/darnota/{id_materia}/{id_aluno}',[MateriaController::class, 'darnota']);
 
+Route::get('/materias/inscricao_prof/{id_materia}/{user_id}',[MateriaController::class, 'inscricao_prof']);
 
